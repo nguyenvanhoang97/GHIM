@@ -384,6 +384,7 @@
             this.gridColumn13.ColumnEdit = this.ceDuAn;
             this.gridColumn13.FieldName = "ThemDuAn";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 9;
             // 

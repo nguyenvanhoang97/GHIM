@@ -74,6 +74,12 @@
     <Compile Include="FrmDuAn.Designer.cs">
       <DependentUpon>FrmDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHTCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHTCV.Designer.cs">
+      <DependentUpon>FrmHTCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reponses\DuAn.cs" />
+    <Compile Include="Reponses\PhanHe.cs" />
     <Compile Include="Reponses\TrangThaiCongViec.cs" />
     <Compile Include="Reponses\Work.cs" />
     <Compile Include="Reponses\User.cs" />
@@ -111,6 +118,9 @@
     <EmbeddedResource Include="FrmDuAn.resx">
       <DependentUpon>FrmDuAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHTCV.resx">
+      <DependentUpon>FrmHTCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +130,20 @@
     <EmbeddedResource Include="FrmQLCV.resx">
       <DependentUpon>FrmQLCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\qlcv.FormDangNhap.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.FrmBaoCao.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.FrmDuAn.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.FrmHTCV.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.frmMain.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.frmNhanVien.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.FrmQLCV.resources" />
+    <EmbeddedResource Include="obj\Debug\qlcv.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.FormDangNhap.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.FrmBaoCao.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.frmMain.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.frmNhanVien.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.FrmQLCV.resources" />
+    <EmbeddedResource Include="obj\Release\qlcv.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +155,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\qlcv.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\qlcv.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\qlcv.csproj.GenerateResource.Cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -197,6 +227,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-brief-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\qlcv.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\qlcv.exe" />
+    <Content Include="obj\Debug\qlcv.exe.licenses" />
+    <Content Include="obj\Debug\qlcv.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Release\qlcv.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\qlcv.exe" />
+    <Content Include="obj\Release\qlcv.exe.licenses" />
+    <Content Include="obj\Release\qlcv.pdb" />
+    <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

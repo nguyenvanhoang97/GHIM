@@ -16,43 +16,23 @@ namespace qlcv
         public FrmQLCV()
         {
             InitializeComponent();
-            LoadNguoiThucHien();
             DuAn();
+
+
         }
-        private void DuAn()
-        {
-            List<DuAn> allDuAn = Retrofit.instance.getAllDuAn();
-            lueDuAn.Properties.DataSource = allDuAn;
-            lueDuAn.Properties.ValueMember = "ID";
-            lueDuAn.Properties.DisplayMember = "TenDuAn";
-        }
+      
         public void Hien()
         {
 
         }
-        private void LoadNguoiThucHien()
+        private void DuAn()
         {
-            //DataTable nguoith = new DataTable();
-
-            List<User> alluser = Retrofit.instance.getAllUser();
-            
-            DataTable dataTable = new DataTable();
-
-            dataTable.Columns.Add("ID", Type.GetType("System.Int32"));
-            dataTable.Columns.Add("Name", Type.GetType("System.String"));
-            for(int i = 0; i < alluser.Count; i++)
-            {
-                dataTable.Rows.Add(alluser[i].ID, alluser[i].Name);
-            }
-            luedNguoiTH.Properties.DataSource = dataTable;
-            luedNguoiTH.Properties.ValueMember = "ID";
-            luedNguoiTH.Properties.DisplayMember = "Name";
-            luedNguoiTH.Properties.PopulateColumns();
+            List<DuAn> allDuAn = Retrofit.instance.getAllDuAn();
+            luedDuAn.Properties.DataSource = allDuAn;
+            luedDuAn.Properties.ValueMember = "ID";
+            luedDuAn.Properties.DisplayMember = "TenDuAn";
         }
-        private void LoadTrangThai()
-        {
-            //List<string> allTrangThai = Retrofit.instance.getAllTrangThai
-        }
+        
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
@@ -73,17 +53,10 @@ namespace qlcv
                 string nguoiYeuCau = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NguoiYeuCau").ToString();
                 string nguoiThucHien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NguoiThucHien").ToString();
                 string duAn = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DuAn").ToString();
+                //FrmHTCV frm = new FrmHTCV(hangMuc , phanHe , moTa , ngayBatDau , ngayHoanThanh , nguoiThucHien , nguoiYeuCau , deadline , trangThai);
+                //frm.Show();
 
-                tbHangMuc.Text = hangMuc;
-                tbMoTa.Text = moTa;
-                tbPhanHe.Text = phanHe;
-                tbNguoiYC.Text = nguoiYeuCau;
-                luedNguoiTH.Text = nguoiThucHien;
-                lueTrangThai.Text = trangThai;
-                lueDuAn.Text = duAn;
-                dateDead.DateTime = deadline;
-                dateNgayBD.DateTime = ngayBatDau;
-                dateNgayHT.DateTime = ngayHoanThanh;
+
             }
             catch (Exception ex)
             {
@@ -111,19 +84,19 @@ namespace qlcv
 
         private void btThem_Click(object sender, EventArgs e)
         {
-
+            FrmHTCV frm = new FrmHTCV();
+            frm.Show();
         }
-
-        private void lueDuAn_EditValueChanged(object sender, EventArgs e)
+        private void LoadWork(string id)
         {
-            string a=lueDuAn.EditValue.ToString();
-            LoadCongViec(a);
-        }
-        private void LoadCongViec(string id)
-        {
-            List<User> users = Retrofit.instance.getAllUser();
             List<Work> works = Retrofit.instance.getAllWork(id);
             gridControl1.DataSource = works;
+        }
+
+        private void luedDuAn_EditValueChanged(object sender, EventArgs e)
+        {
+            string id= luedDuAn.EditValue.ToString();
+            LoadWork(id);
         }
     }
 }

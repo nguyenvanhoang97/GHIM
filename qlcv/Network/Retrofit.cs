@@ -9,7 +9,7 @@ namespace qlcv.Network
 {
     class Retrofit
     {
-        private string BASE_URL = "http://10.82.1.72:6789/";
+        private string BASE_URL = "http://10.82.1.72:6788/";
         private User userLogin;
 
         public static Retrofit instance = new Retrofit();
@@ -30,6 +30,7 @@ namespace qlcv.Network
             userLogin = JsonConvert.DeserializeObject<User>(json);
             return userLogin;
         }
+        //user
         public List<User> getAllUser()
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/user/getAll");
@@ -52,12 +53,7 @@ namespace qlcv.Network
             return JsonConvert.DeserializeObject<StatusRespon>(json);
 
         }
-
-        //internal StatusRespon deleteUser(DuAn duAn)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
+        //du an
         public List<DuAn> getAllDuAn()
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/duan/getAll");
@@ -74,6 +70,7 @@ namespace qlcv.Network
             StatusRespon s = JObject.Parse(json).ToObject<StatusRespon>();
             return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
+        //work
         public List<Work> getAllWork(string id)
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/"+id);
@@ -84,10 +81,22 @@ namespace qlcv.Network
             string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/" + id);
             return JsonConvert.DeserializeObject<List<Work>>(json);
         }
-        //public List<TrangThai> getAllTrangThai()
-        //{
-        //    string json = Networking.getInstance().Get(BASE_URL + "api/trangthai/getAll");
-        //    return JsonConvert.DeserializeObject<List<TrangThaiCongViec>>(json);
-        //}
+        public StatusRespon addWork(Work works)
+        {
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/addWork", works);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
+        }
+        //trang thai công việc
+        public List<TrangThaiCongViec> getAllTrangThai()
+        {
+            string json = Networking.getInstance().Get(BASE_URL + "api/trangthai/getAll");
+            return JsonConvert.DeserializeObject<List<TrangThaiCongViec>>(json);
+        }
+        //phân hệ
+        public List<PhanHe> getAllPhanHe()
+        {
+            string json = Networking.getInstance().Get(BASE_URL + "api/phanhe/getAll");
+            return JsonConvert.DeserializeObject<List<PhanHe>>(json);
+        }
     }
 }

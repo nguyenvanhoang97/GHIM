@@ -7,6 +7,8 @@ namespace qlcv.Reponses
 {
     class Work
     {
+      
+
         public DateTime Deadline { get; set; }
         public int ID { get; set; }
         public string Hangmuc { get; set; }
@@ -31,6 +33,12 @@ namespace qlcv.Reponses
             Phanhe = phanhe;
             Status = status;
             TenDuAn = tenDuAn;
+        }
+       
+
+        public Work()
+        {
+
         }
     }
 }

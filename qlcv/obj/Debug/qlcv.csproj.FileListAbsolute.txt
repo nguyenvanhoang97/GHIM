@@ -92,3 +92,4 @@ C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\q
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.pdb
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.csprojResolveAssemblyReference.cache
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.FrmDuAn.resources
+C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.FrmHTCV.resources

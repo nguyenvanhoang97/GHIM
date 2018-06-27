@@ -13,11 +13,11 @@ namespace qlcv
 {
     public partial class FrmDuAn : Form
     {
+        
         public FrmDuAn()
         {
             InitializeComponent();
         }
-        string id;
         private void Load_duAn()
         {
             List<DuAn> duan = Retrofit.instance.getAllDuAn();
@@ -27,12 +27,13 @@ namespace qlcv
         {
             DuAn duAn = new DuAn(tbDuAn.Text);
             StatusRespon status = Retrofit.instance.addDuAn(duAn);
-            duAn.ID = Int32.Parse(id);
-            Load_duAn();
+          
             if (status.Status)
             {
                 MessageBox.Show("Thêm dự án thành công!!!");
+                Load_duAn();
             }
+            An();
         }
 
         private void FrmDuAn_Load(object sender, EventArgs e)
@@ -48,12 +49,10 @@ namespace qlcv
         {
             tbDuAn.Enabled = false;
         }
-        bool checkThem;
         private void btThem_Click(object sender, EventArgs e)
         {
             Hien();
             tbDuAn.ResetText();
-            checkThem = true;
         }
         private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
