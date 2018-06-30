@@ -63,7 +63,6 @@
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,14 +72,14 @@
             this.btXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btGui = new DevExpress.XtraEditors.SimpleButton();
             this.btThem = new DevExpress.XtraEditors.SimpleButton();
+            this.luedDuAn = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.laCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.luedDuAn = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -88,14 +87,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btXoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luedDuAn.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laCG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luedDuAn.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -137,7 +136,6 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn12,
@@ -165,7 +163,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Hạng mục";
-            this.gridColumn2.FieldName = "Hangmuc";
+            this.gridColumn2.FieldName = "HangMuc";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
@@ -175,7 +173,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Phân hệ";
-            this.gridColumn3.FieldName = "Phanhe";
+            this.gridColumn3.FieldName = "PhanHe";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
@@ -186,7 +184,7 @@
             // 
             this.gridColumn4.Caption = "Mô tả";
             this.gridColumn4.ColumnEdit = this.repositoryItemMemoEdit1;
-            this.gridColumn4.FieldName = "Mota";
+            this.gridColumn4.FieldName = "MoTa";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
@@ -202,7 +200,7 @@
             this.gridColumn5.Caption = "Ngày bắt đầu";
             this.gridColumn5.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn5.FieldName = "Ngaybatdau";
+            this.gridColumn5.FieldName = "NgayBatDau";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
@@ -219,45 +217,33 @@
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 50;
             // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Ngày hoàn thành";
-            this.gridColumn7.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
-            this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn7.FieldName = "Ngayhoanthanh";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 61;
-            // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Người yêu cầu";
-            this.gridColumn8.FieldName = "Nguoiyeucau";
+            this.gridColumn8.FieldName = "NguoiYeuCau";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.VisibleIndex = 6;
             this.gridColumn8.Width = 46;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Người thực hiện";
-            this.gridColumn9.FieldName = "Nguoithuchien";
+            this.gridColumn9.FieldName = "NguoiThucHien";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.VisibleIndex = 8;
             this.gridColumn9.Width = 55;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "Trạng thái";
-            this.gridColumn12.FieldName = "TrangThaiCongViec";
+            this.gridColumn12.FieldName = "Status";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 8;
+            this.gridColumn12.VisibleIndex = 7;
             this.gridColumn12.Width = 45;
             // 
             // gridColumn10
@@ -266,7 +252,7 @@
             this.gridColumn10.ColumnEdit = this.btSua;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 9;
             this.gridColumn10.Width = 45;
             // 
             // btSua
@@ -285,7 +271,7 @@
             this.gridColumn11.ColumnEdit = this.btXoa;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 11;
+            this.gridColumn11.VisibleIndex = 10;
             this.gridColumn11.Width = 63;
             // 
             // btXoa
@@ -296,6 +282,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.btXoa.Name = "btXoa";
             this.btXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btXoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btXoa_ButtonClick);
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // btGui
             // 
@@ -317,6 +305,26 @@
             this.btThem.TabIndex = 4;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
+            // luedDuAn
+            // 
+            this.luedDuAn.Location = new System.Drawing.Point(37, 23);
+            this.luedDuAn.Name = "luedDuAn";
+            this.luedDuAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.luedDuAn.Properties.NullText = "";
+            this.luedDuAn.Properties.View = this.searchLookUpEdit1View;
+            this.luedDuAn.Size = new System.Drawing.Size(184, 20);
+            this.luedDuAn.StyleController = this.layoutControl1;
+            this.luedDuAn.TabIndex = 13;
+            this.luedDuAn.EditValueChanged += new System.EventHandler(this.luedDuAn_EditValueChanged);
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // laCG
             // 
@@ -467,26 +475,6 @@
             this.layoutControlItem1.Text = "Dự án";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(29, 13);
             // 
-            // luedDuAn
-            // 
-            this.luedDuAn.Location = new System.Drawing.Point(37, 23);
-            this.luedDuAn.Name = "luedDuAn";
-            this.luedDuAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luedDuAn.Properties.NullText = "";
-            this.luedDuAn.Properties.View = this.searchLookUpEdit1View;
-            this.luedDuAn.Size = new System.Drawing.Size(184, 20);
-            this.luedDuAn.StyleController = this.layoutControl1;
-            this.luedDuAn.TabIndex = 13;
-            this.luedDuAn.EditValueChanged += new System.EventHandler(this.luedDuAn_EditValueChanged);
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
             // FrmQLCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,14 +490,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btXoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luedDuAn.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laCG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luedDuAn.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,7 +516,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;

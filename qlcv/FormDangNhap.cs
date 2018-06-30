@@ -26,10 +26,20 @@ namespace qlcv
             Console.Write(login);
             if (login.status)
             {
-                Networking.getInstance().setToken(login.Token);
-                frmMain frMenu = new frmMain();
-                frMenu.Show();
-                this.Hide();
+                if (login.IsAdmin)
+                {
+                    Networking.getInstance().setToken(login.Token);
+                    frmMain frMenu = new frmMain();
+                    frMenu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Networking.getInstance().setToken(login.Token);
+                    FrmMainUser frMenuU = new FrmMainUser();
+                    frMenuU.Show();
+                    this.Hide();
+                }
             }
             else
             {

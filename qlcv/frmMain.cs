@@ -34,5 +34,10 @@ namespace qlcv
             FrmDuAn frmDA = new FrmDuAn();
             frmDA.ShowDialog();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

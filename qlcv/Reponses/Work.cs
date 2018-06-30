@@ -11,26 +11,26 @@ namespace qlcv.Reponses
 
         public DateTime Deadline { get; set; }
         public int ID { get; set; }
-        public string Hangmuc { get; set; }
-        public string Mota { get; set; }
-        public DateTime Ngaybatdau { get; set; }
-        public DateTime Ngayhoanthanh { get; set; }
-        public int Nguoithuchien { get; set; }
-        public string Nguoiyeucau { get; set; }
-        public string Phanhe { get; set; }
+        public string HangMuc { get; set; }
+        public string MoTa { get; set; }
+        public DateTime NgayBatDau { get; set; }
+        //public DateTime Ngayhoanthanh { get; set; }
+        public int NguoiThucHien { get; set; }
+        public string NguoiYeuCau { get; set; }
+        public string PhanHe { get; set; }
         public string Status { get; set; }
         public string TenDuAn { get; set; }
-        public Work(DateTime deadline, int iD, string hangmuc, string mota, DateTime ngaybatdau, DateTime ngayhoanthanh, int nguoithuchien, string nguoiyeucau, string phanhe, string status, string tenDuAn)
+        public Work(DateTime deadline, int iD, string hangmuc, string mota, DateTime ngaybatdau, /*DateTime ngayhoanthanh*/ int nguoithuchien, string nguoiyeucau, string phanhe, string status, string tenDuAn)
         {
             Deadline = deadline;
             ID = iD;
-            Hangmuc = hangmuc;
-            Mota = mota;
-            Ngaybatdau = ngaybatdau;
-            Ngayhoanthanh = ngayhoanthanh;
-            Nguoithuchien = nguoithuchien;
-            Nguoiyeucau = nguoiyeucau;
-            Phanhe = phanhe;
+            HangMuc = hangmuc;
+            MoTa = mota;
+            NgayBatDau = ngaybatdau;
+            //Ngayhoanthanh = ngayhoanthanh;
+            NguoiThucHien = nguoithuchien;
+            NguoiYeuCau = nguoiyeucau;
+            PhanHe = phanhe;
             Status = status;
             TenDuAn = tenDuAn;
         }

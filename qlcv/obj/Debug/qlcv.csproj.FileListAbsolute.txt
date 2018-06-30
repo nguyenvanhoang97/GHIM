@@ -93,3 +93,4 @@ C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\q
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.csprojResolveAssemblyReference.cache
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.FrmDuAn.resources
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.FrmHTCV.resources
+C:\Users\HoangNguyen\Documents\Visual Studio 2015\Projects\qlcv\qlcv\obj\Debug\qlcv.FrmMainUser.resources

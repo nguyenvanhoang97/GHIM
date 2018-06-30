@@ -20,7 +20,14 @@ namespace qlcv
 
 
         }
-      
+        string id;
+        private void LoadCongViec()
+        {
+
+            List<Work> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
+            gridControl1.DataSource = allwork;
+        }
+
         public void Hien()
         {
 
@@ -32,7 +39,7 @@ namespace qlcv
             luedDuAn.Properties.ValueMember = "ID";
             luedDuAn.Properties.DisplayMember = "TenDuAn";
         }
-        
+
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
@@ -43,23 +50,12 @@ namespace qlcv
             try
             {
                 string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-                string hangMuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
-                string phanHe = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "PhanHe").ToString();
-                string moTa = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MoTa").ToString();
-                DateTime ngayBatDau = DateTime.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayBatDau").ToString());
-                DateTime deadline = DateTime.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Deadline").ToString());
-                DateTime ngayHoanThanh = DateTime.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgayHoanThanh").ToString());
-                string trangThai = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TrangThaiCongViec").ToString();
-                string nguoiYeuCau = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NguoiYeuCau").ToString();
-                string nguoiThucHien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NguoiThucHien").ToString();
-                string duAn = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DuAn").ToString();
-                //FrmHTCV frm = new FrmHTCV(hangMuc , phanHe , moTa , ngayBatDau , ngayHoanThanh , nguoiThucHien , nguoiYeuCau , deadline , trangThai);
-                //frm.Show();
-
+                FrmHTCV frm = new FrmHTCV(id);
+                frm.Show();
 
             }
             catch (Exception ex)
-            {
+           {
 
                 throw ex;
             }
@@ -95,8 +91,35 @@ namespace qlcv
 
         private void luedDuAn_EditValueChanged(object sender, EventArgs e)
         {
-            string id= luedDuAn.EditValue.ToString();
+            string id = luedDuAn.EditValue.ToString();
             LoadWork(id);
+        }
+
+        private void btXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+            string hangmuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Hangmuc").ToString();
+            DialogResult result = MessageBox.Show("Xóa "+hangmuc+"?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Work work = new Work();
+                work.ID = Int32.Parse(id);
+                StatusRespon status = Retrofit.instance.deleteWork(work);
+                if (status.Status)
+                {
+                    MessageBox.Show("Xóa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Không xóa được công việc này");
+                }
+                LoadCongViec();
+            }
         }
     }
 }

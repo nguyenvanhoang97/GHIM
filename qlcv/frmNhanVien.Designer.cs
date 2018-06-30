@@ -661,7 +661,7 @@
             this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 1;
             this.layoutControlItem13.Size = new System.Drawing.Size(196, 35);
             this.layoutControlItem13.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 4, 0);
-            this.layoutControlItem13.Text = "Pass word";
+            this.layoutControlItem13.Text = "Password:";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(66, 13);
             this.layoutControlItem13.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 

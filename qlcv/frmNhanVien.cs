@@ -96,7 +96,7 @@ namespace qlcv
         {
             try
             {
-               id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+                id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
                 string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Name").ToString();
                 string diaChi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DiaChi").ToString();
                 string mail = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail").ToString();

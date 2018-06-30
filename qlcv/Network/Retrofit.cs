@@ -71,19 +71,39 @@ namespace qlcv.Network
             return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
         //work
-        public List<Work> getAllWork(string id)
+        //public List<Work> getAllWork()
+        //{
+        //    string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll");
+        //    return JsonConvert.DeserializeObject<List<Work>>(json);
+        //}
+        public List<Work> getAllWork(string idDuan)
         {
-            string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/"+id);
+            string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/"+ idDuan);
             return JsonConvert.DeserializeObject<List<Work>>(json);
         }
-        public List<Work> getAllWork(int id)
+        public List<Work> getAllWork(int idDuan)
         {
-            string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/" + id);
+            string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/" + idDuan);
             return JsonConvert.DeserializeObject<List<Work>>(json);
+        }
+        public List<Work> getChiTietWork(string id)
+        {
+            string json = Networking.getInstance().Get(BASE_URL + "api/work/get/" + id);
+            return JsonConvert.DeserializeObject<List<Work>>(json);
+        }
+        public StatusRespon updateWork(Work work)
+        {
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/edit", work);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
         public StatusRespon addWork(Work works)
         {
-            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/addWork", works);
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/add", works);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
+        }
+        public StatusRespon deleteWork(Work works)
+        {
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/delete", works);
             return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
         //trang thai công việc
