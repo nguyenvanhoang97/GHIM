@@ -18,6 +18,7 @@ namespace qlcv.Reponses
         public int NguoiThucHien { get; set; }
         public string NguoiYeuCau { get; set; }
         public string PhanHe { get; set; }
+        public string NameNguoiThucHien { get; set; }
         public string Status { get; set; }
         public string TenDuAn { get; set; }
         public Work(DateTime deadline, int iD, string hangmuc, string mota, DateTime ngaybatdau, /*DateTime ngayhoanthanh*/ int nguoithuchien, string nguoiyeucau, string phanhe, string status, string tenDuAn)

@@ -71,11 +71,11 @@ namespace qlcv.Network
             return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
         //work
-        //public List<Work> getAllWork()
-        //{
-        //    string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll");
-        //    return JsonConvert.DeserializeObject<List<Work>>(json);
-        //}
+        public StatusRespon doneWork(string id)
+        {
+            string json = Networking.getInstance().Get(BASE_URL+"api/work/done/"+id);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
+        }
         public List<Work> getAllWork(string idDuan)
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/"+ idDuan);

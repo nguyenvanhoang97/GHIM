@@ -158,7 +158,7 @@
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 56;
+            this.gridColumn1.Width = 83;
             // 
             // gridColumn2
             // 
@@ -168,7 +168,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 56;
+            this.gridColumn2.Width = 83;
             // 
             // gridColumn3
             // 
@@ -178,7 +178,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 56;
+            this.gridColumn3.Width = 83;
             // 
             // gridColumn4
             // 
@@ -189,7 +189,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 95;
+            this.gridColumn4.Width = 142;
             // 
             // repositoryItemMemoEdit1
             // 
@@ -205,7 +205,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 50;
+            this.gridColumn5.Width = 74;
             // 
             // gridColumn6
             // 
@@ -215,7 +215,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 50;
+            this.gridColumn6.Width = 74;
             // 
             // gridColumn8
             // 
@@ -225,7 +225,7 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
-            this.gridColumn8.Width = 46;
+            this.gridColumn8.Width = 107;
             // 
             // gridColumn9
             // 
@@ -235,7 +235,7 @@
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
-            this.gridColumn9.Width = 55;
+            this.gridColumn9.Width = 103;
             // 
             // gridColumn12
             // 
@@ -244,7 +244,7 @@
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 7;
-            this.gridColumn12.Width = 45;
+            this.gridColumn12.Width = 89;
             // 
             // gridColumn10
             // 
@@ -253,7 +253,7 @@
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 9;
-            this.gridColumn10.Width = 45;
+            this.gridColumn10.Width = 46;
             // 
             // btSua
             // 
@@ -272,7 +272,7 @@
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
-            this.gridColumn11.Width = 63;
+            this.gridColumn11.Width = 41;
             // 
             // btXoa
             // 

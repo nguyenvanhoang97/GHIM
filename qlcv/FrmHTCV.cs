@@ -21,8 +21,6 @@ namespace qlcv
             ID = id;
             //load data set gia tri 
             List<Work> getAllWork = Retrofit.instance.getChiTietWork(id);
-
-
         }
 
         public FrmHTCV()

@@ -39,5 +39,11 @@ namespace qlcv
         {
 
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmBaoCao frmBC = new FrmBaoCao();
+            frmBC.ShowDialog();
+        }
     }
 }

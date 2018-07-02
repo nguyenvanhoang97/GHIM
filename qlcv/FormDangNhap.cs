@@ -36,8 +36,8 @@ namespace qlcv
                 else
                 {
                     Networking.getInstance().setToken(login.Token);
-                    FrmMainUser frMenuU = new FrmMainUser();
-                    frMenuU.Show();
+                    FrmBaoCao frBC = new FrmBaoCao();
+                    frBC.Show();
                     this.Hide();
                 }
             }

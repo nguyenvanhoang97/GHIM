@@ -17,8 +17,6 @@ namespace qlcv
         {
             InitializeComponent();
             DuAn();
-
-
         }
         string id;
         private void LoadCongViec()
