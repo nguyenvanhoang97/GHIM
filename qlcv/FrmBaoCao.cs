@@ -28,13 +28,13 @@ namespace qlcv
 
         private void LoadCongViec()
         {
-            List<Work> allwork = Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
+            List<WorkV2> allwork = Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
             gridControl1.DataSource = allwork;
         }
 
         private void LoadWork(string id)
         {
-            List<Work> works = Retrofit.instance.getAllWork(id);
+            List<WorkV2> works = Retrofit.instance.getAllWork(id);
             gridControl1.DataSource = works;
         }
 
@@ -66,6 +66,17 @@ namespace qlcv
             string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
             FrmBC frm = new FrmBC(id);
             frm.ShowDialog();
+        }
+        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+        }
+
+        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
+                e.Appearance.BackColor = Color.LightYellow;
         }
     }
 }

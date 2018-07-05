@@ -30,8 +30,6 @@
         {
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition7 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition8 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition9 = new DevExpress.XtraLayout.ColumnDefinition();
@@ -45,14 +43,17 @@
             DevExpress.XtraLayout.ColumnDefinition columnDefinition17 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition18 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition19 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition20 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition21 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -114,14 +115,14 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(2, 82);
+            this.gridControl1.Location = new System.Drawing.Point(2, 52);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btSua,
             this.btXoa,
             this.repositoryItemMemoEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(957, 403);
+            this.gridControl1.Size = new System.Drawing.Size(957, 433);
             this.gridControl1.TabIndex = 12;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -146,12 +147,11 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
-            this.gridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView1_CustomDrawRowIndicator);
-            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle);
             // 
             // gridColumn1
             // 
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.Caption = "Mã công việc";
             this.gridColumn1.FieldName = "ID";
             this.gridColumn1.Name = "gridColumn1";
@@ -162,6 +162,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.Caption = "Hạng mục";
             this.gridColumn2.FieldName = "HangMuc";
             this.gridColumn2.Name = "gridColumn2";
@@ -172,6 +174,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.Caption = "Phân hệ";
             this.gridColumn3.FieldName = "PhanHe";
             this.gridColumn3.Name = "gridColumn3";
@@ -182,6 +186,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.Caption = "Mô tả";
             this.gridColumn4.ColumnEdit = this.repositoryItemMemoEdit1;
             this.gridColumn4.FieldName = "MoTa";
@@ -197,6 +203,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.Caption = "Ngày bắt đầu";
             this.gridColumn5.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -209,6 +217,8 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn6.Caption = "Deadline";
             this.gridColumn6.FieldName = "Deadline";
             this.gridColumn6.Name = "gridColumn6";
@@ -219,6 +229,8 @@
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn8.Caption = "Người yêu cầu";
             this.gridColumn8.FieldName = "NguoiYeuCau";
             this.gridColumn8.Name = "gridColumn8";
@@ -229,6 +241,8 @@
             // 
             // gridColumn9
             // 
+            this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn9.Caption = "Người thực hiện";
             this.gridColumn9.FieldName = "NguoiThucHien";
             this.gridColumn9.Name = "gridColumn9";
@@ -239,15 +253,20 @@
             // 
             // gridColumn12
             // 
+            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn12.Caption = "Trạng thái";
             this.gridColumn12.FieldName = "Status";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 7;
             this.gridColumn12.Width = 89;
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn10.Caption = "Sửa";
             this.gridColumn10.ColumnEdit = this.btSua;
             this.gridColumn10.Name = "gridColumn10";
@@ -263,10 +282,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.btSua.Name = "btSua";
             this.btSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btSua_ButtonClick);
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // gridColumn11
             // 
+            this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn11.Caption = "Xóa";
             this.gridColumn11.ColumnEdit = this.btXoa;
             this.gridColumn11.Name = "gridColumn11";
@@ -288,9 +310,9 @@
             // btGui
             // 
             this.btGui.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_new_post_24;
-            this.btGui.Location = new System.Drawing.Point(85, 51);
+            this.btGui.Location = new System.Drawing.Point(305, 23);
             this.btGui.Name = "btGui";
-            this.btGui.Size = new System.Drawing.Size(76, 24);
+            this.btGui.Size = new System.Drawing.Size(76, 22);
             this.btGui.StyleController = this.layoutControl1;
             this.btGui.TabIndex = 11;
             this.btGui.Text = "Gửi";
@@ -298,9 +320,9 @@
             // btThem
             // 
             this.btThem.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_plus_math_24;
-            this.btThem.Location = new System.Drawing.Point(5, 51);
+            this.btThem.Location = new System.Drawing.Point(225, 23);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(76, 24);
+            this.btThem.Size = new System.Drawing.Size(76, 22);
             this.btThem.StyleController = this.layoutControl1;
             this.btThem.TabIndex = 4;
             this.btThem.Text = "Thêm";
@@ -336,39 +358,37 @@
             this.laCG.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.laCG.Location = new System.Drawing.Point(0, 0);
             this.laCG.Name = "Root";
-            columnDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition5.Width = 2.0652951840190186D;
-            columnDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition6.Width = 9.788086588279949D;
             columnDefinition7.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition7.Width = 9.788086588279949D;
+            columnDefinition7.Width = 2.0652951840190186D;
             columnDefinition8.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition8.Width = 1.9683851042922924D;
+            columnDefinition8.Width = 9.788086588279949D;
             columnDefinition9.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition9.Width = 9.788086588279949D;
             columnDefinition10.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition10.Width = 9.788086588279949D;
+            columnDefinition10.Width = 1.9683851042922924D;
             columnDefinition11.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition11.Width = 1.9683851042922924D;
+            columnDefinition11.Width = 9.788086588279949D;
             columnDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition12.Width = 9.788086588279949D;
             columnDefinition13.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition13.Width = 9.788086588279949D;
+            columnDefinition13.Width = 1.9683851042922924D;
             columnDefinition14.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition14.Width = 1.9683851042922924D;
+            columnDefinition14.Width = 9.788086588279949D;
             columnDefinition15.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition15.Width = 9.788086588279949D;
             columnDefinition16.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition16.Width = 9.788086588279949D;
+            columnDefinition16.Width = 1.9683851042922924D;
             columnDefinition17.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition17.Width = 1.9683851042922924D;
+            columnDefinition17.Width = 9.788086588279949D;
             columnDefinition18.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition18.Width = 9.788086588279949D;
             columnDefinition19.SizeType = System.Windows.Forms.SizeType.Percent;
             columnDefinition19.Width = 1.9683851042922924D;
+            columnDefinition20.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition20.Width = 9.788086588279949D;
+            columnDefinition21.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition21.Width = 1.9683851042922924D;
             this.laCG.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition5,
-            columnDefinition6,
             columnDefinition7,
             columnDefinition8,
             columnDefinition9,
@@ -381,14 +401,16 @@
             columnDefinition16,
             columnDefinition17,
             columnDefinition18,
-            columnDefinition19});
-            rowDefinition3.Height = 80D;
-            rowDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition4.Height = 407D;
-            rowDefinition4.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            columnDefinition19,
+            columnDefinition20,
+            columnDefinition21});
+            rowDefinition2.Height = 50D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition3.Height = 437D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
             this.laCG.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition3,
-            rowDefinition4});
+            rowDefinition2,
+            rowDefinition3});
             this.laCG.OptionsTableLayoutItem.ColumnIndex = 2;
             this.laCG.OptionsTableLayoutItem.ColumnSpan = 2;
             this.laCG.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -398,20 +420,20 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.gridControl1;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.OptionsTableLayoutItem.ColumnSpan = 15;
             this.layoutControlItem12.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem12.Size = new System.Drawing.Size(961, 407);
+            this.layoutControlItem12.Size = new System.Drawing.Size(961, 437);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem11,
+            this.layoutControlItem1,
             this.layoutControlItem9,
-            this.layoutControlItem1});
+            this.layoutControlItem11});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
@@ -421,34 +443,36 @@
             columnDefinition2.Width = 80D;
             columnDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
             columnDefinition3.Width = 60D;
-            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition4.Width = 100D;
+            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition4.Width = 80D;
+            columnDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition5.Width = 80D;
+            columnDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition6.Width = 100D;
             this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
             columnDefinition1,
             columnDefinition2,
             columnDefinition3,
-            columnDefinition4});
-            rowDefinition1.Height = 50D;
+            columnDefinition4,
+            columnDefinition5,
+            columnDefinition6});
+            rowDefinition1.Height = 100D;
             rowDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
-            rowDefinition2.Height = 50D;
-            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition1,
-            rowDefinition2});
+            rowDefinition1});
             this.layoutControlGroup1.OptionsTableLayoutItem.ColumnSpan = 15;
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(961, 80);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(961, 50);
             this.layoutControlGroup1.Text = "Tác vụ";
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btGui;
-            this.layoutControlItem11.Location = new System.Drawing.Point(80, 28);
+            this.layoutControlItem11.Location = new System.Drawing.Point(300, 0);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(80, 26);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem11.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem11.Size = new System.Drawing.Size(80, 28);
+            this.layoutControlItem11.OptionsTableLayoutItem.ColumnIndex = 4;
+            this.layoutControlItem11.Size = new System.Drawing.Size(80, 26);
             this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
@@ -456,11 +480,11 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btThem;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem9.Location = new System.Drawing.Point(220, 0);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(80, 26);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem9.Size = new System.Drawing.Size(80, 28);
+            this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem9.Size = new System.Drawing.Size(80, 26);
             this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
@@ -471,7 +495,7 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem1.Size = new System.Drawing.Size(220, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(220, 26);
             this.layoutControlItem1.Text = "Dự án";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(29, 13);
             // 

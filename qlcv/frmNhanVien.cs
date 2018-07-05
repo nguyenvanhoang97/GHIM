@@ -38,7 +38,7 @@ namespace qlcv
                 {
                     alluser[i].DiaChi = "";
                 }
-                if (alluser[i].GioiTinh)
+                if (!alluser[i].GioiTinh)
                 {
                     alluser[i].gt = "Nam";
                 }
@@ -223,7 +223,7 @@ namespace qlcv
             //}
             //lueGender.EditValue = gt;
             //tbAddress.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DiaChi").ToString();
-            //tbMail.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail").ToString();
+            //tbMail.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail").ToString();
             //tbPass.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString();
             //tbUsername.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username").ToString();
             //tbPhone.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SoDienThoai").ToString();

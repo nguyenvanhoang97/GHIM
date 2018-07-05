@@ -108,7 +108,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(642, 3, 450, 400);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(114, 21, 450, 400);
             this.layoutControl1.Root = this.laCG;
             this.layoutControl1.Size = new System.Drawing.Size(639, 433);
             this.layoutControl1.TabIndex = 0;
@@ -194,8 +194,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgayBD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgayBD.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateNgayBD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateNgayBD.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateNgayBD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateNgayBD.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateNgayBD.Size = new System.Drawing.Size(209, 20);
             this.dateNgayBD.StyleController = this.layoutControl1;
             this.dateNgayBD.TabIndex = 6;

@@ -9,7 +9,7 @@ namespace qlcv.Network
 {
     class Retrofit
     {
-        private string BASE_URL = "http://10.82.1.72:6788/";
+        private string BASE_URL = "http://10.100.1.36:6788/";
         private User userLogin;
 
         public static Retrofit instance = new Retrofit();
@@ -76,20 +76,20 @@ namespace qlcv.Network
             string json = Networking.getInstance().Get(BASE_URL+"api/work/done/"+id);
             return JsonConvert.DeserializeObject<StatusRespon>(json);
         }
-        public List<Work> getAllWork(string idDuan)
+        public List<WorkV2> getAllWork(string idDuan)
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/"+ idDuan);
-            return JsonConvert.DeserializeObject<List<Work>>(json);
+            return JsonConvert.DeserializeObject<List<WorkV2>>(json);
         }
         public List<Work> getAllWork(int idDuan)
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/work/getAll/" + idDuan);
             return JsonConvert.DeserializeObject<List<Work>>(json);
         }
-        public List<Work> getChiTietWork(string id)
+        public Work getChiTietWork(string id)
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/work/get/" + id);
-            return JsonConvert.DeserializeObject<List<Work>>(json);
+            return JsonConvert.DeserializeObject<Work>(json);
         }
         public StatusRespon updateWork(Work work)
         {

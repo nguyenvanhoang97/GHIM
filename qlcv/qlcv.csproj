@@ -121,6 +121,7 @@
     <Compile Include="Reponses\Work.cs" />
     <Compile Include="Reponses\User.cs" />
     <Compile Include="Reponses\StatusRespon.cs" />
+    <Compile Include="Reponses\WorkV2.cs" />
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +258,8 @@
     <Content Include="obj\Release\qlcv.exe.licenses" />
     <Content Include="obj\Release\qlcv.pdb" />
     <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\icons8-delete-48 %281%29.png" />
+    <None Include="Resources\icons8-checkmark-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

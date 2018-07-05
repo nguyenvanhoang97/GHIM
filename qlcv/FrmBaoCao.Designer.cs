@@ -63,8 +63,8 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSua)).BeginInit();
@@ -85,7 +85,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btSua,
             this.btXoa});
-            this.gridControl1.Size = new System.Drawing.Size(962, 356);
+            this.gridControl1.Size = new System.Drawing.Size(875, 371);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -111,6 +111,7 @@
             this.ID.Caption = "Mã công việc";
             this.ID.FieldName = "ID";
             this.ID.Name = "ID";
+            this.ID.OptionsColumn.AllowEdit = false;
             this.ID.Visible = true;
             this.ID.VisibleIndex = 0;
             // 
@@ -119,6 +120,7 @@
             this.HangMuc.Caption = "Hạng mục";
             this.HangMuc.FieldName = "HangMuc";
             this.HangMuc.Name = "HangMuc";
+            this.HangMuc.OptionsColumn.AllowEdit = false;
             this.HangMuc.Visible = true;
             this.HangMuc.VisibleIndex = 1;
             // 
@@ -127,6 +129,7 @@
             this.PhanHe.Caption = "Phân hệ";
             this.PhanHe.FieldName = "PhanHe";
             this.PhanHe.Name = "PhanHe";
+            this.PhanHe.OptionsColumn.AllowEdit = false;
             this.PhanHe.Visible = true;
             this.PhanHe.VisibleIndex = 2;
             // 
@@ -135,6 +138,7 @@
             this.MoTa.Caption = "Mô tả";
             this.MoTa.FieldName = "MoTa";
             this.MoTa.Name = "MoTa";
+            this.MoTa.OptionsColumn.AllowEdit = false;
             this.MoTa.Visible = true;
             this.MoTa.VisibleIndex = 3;
             // 
@@ -143,6 +147,7 @@
             this.gridColumn5.Caption = "Ngày bắt đầu";
             this.gridColumn5.FieldName = "NgayBatDau";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
@@ -151,6 +156,7 @@
             this.gridColumn6.Caption = "Deadline";
             this.gridColumn6.FieldName = "Deadline";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             // 
@@ -159,6 +165,7 @@
             this.gridColumn7.Caption = "Người yêu cầu ";
             this.gridColumn7.FieldName = "NguoiYeuCau";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             // 
@@ -167,6 +174,7 @@
             this.gridColumn8.Caption = "Người thực hiện";
             this.gridColumn8.FieldName = "NameNguoiThucHien";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
             // 
@@ -175,6 +183,7 @@
             this.gridColumn9.Caption = "Trạng thái";
             this.gridColumn9.FieldName = "Status";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
             // 
@@ -212,12 +221,12 @@
             // 
             // lueDuAn
             // 
-            this.lueDuAn.Location = new System.Drawing.Point(324, 2);
+            this.lueDuAn.Location = new System.Drawing.Point(300, 2);
             this.lueDuAn.Name = "lueDuAn";
             this.lueDuAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueDuAn.Properties.NullText = "";
-            this.lueDuAn.Size = new System.Drawing.Size(228, 20);
+            this.lueDuAn.Size = new System.Drawing.Size(202, 20);
             this.lueDuAn.StyleController = this.layoutControl1;
             this.lueDuAn.TabIndex = 5;
             this.lueDuAn.EditValueChanged += new System.EventHandler(this.lueDuAn_EditValueChanged_1);
@@ -231,7 +240,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(26, 220, 450, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(966, 430);
+            this.layoutControl1.Size = new System.Drawing.Size(879, 445);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -293,7 +302,7 @@
             rowDefinition2,
             rowDefinition3});
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(966, 430);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(879, 445);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -303,31 +312,31 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 12;
             this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem1.Size = new System.Drawing.Size(966, 360);
+            this.layoutControlItem1.Size = new System.Drawing.Size(879, 375);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.lueDuAn;
+            this.layoutControlItem2.Location = new System.Drawing.Point(262, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 4;
+            this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem2.Size = new System.Drawing.Size(242, 35);
+            this.layoutControlItem2.Text = "Dự án:";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(33, 13);
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Xóa";
             this.gridColumn11.Name = "gridColumn11";
             // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.lueDuAn;
-            this.layoutControlItem2.Location = new System.Drawing.Point(286, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 4;
-            this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem2.Size = new System.Drawing.Size(268, 35);
-            this.layoutControlItem2.Text = "Dự án:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(33, 13);
-            // 
             // FrmBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 430);
+            this.ClientSize = new System.Drawing.Size(879, 445);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmBaoCao";
             this.Text = "Quản lý báo cáo";

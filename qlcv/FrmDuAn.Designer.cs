@@ -115,6 +115,7 @@
             this.gridColumn1.Caption = "Dự án";
             this.gridColumn1.FieldName = "TenDuAn";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
             // 
@@ -125,6 +126,7 @@
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn2.FieldName = "NgayTao";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             // 
@@ -133,6 +135,7 @@
             this.gridColumn5.Caption = "Mã dự án";
             this.gridColumn5.FieldName = "ID";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
             // 
@@ -162,6 +165,7 @@
             // 
             // btLuu
             // 
+            this.btLuu.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_save_24;
             this.btLuu.Location = new System.Drawing.Point(276, 72);
             this.btLuu.Name = "btLuu";
             this.btLuu.Size = new System.Drawing.Size(88, 31);
@@ -172,6 +176,7 @@
             // 
             // btThem
             // 
+            this.btThem.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_plus_math_24;
             this.btThem.Location = new System.Drawing.Point(92, 72);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(88, 31);

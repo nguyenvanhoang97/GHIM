@@ -13,14 +13,26 @@ namespace qlcv
 {
     public partial class FrmHTCV : Form
     {
-        bool Them = true;
         private string ID;
         public FrmHTCV(string id)
         {
             InitializeComponent();
             ID = id;
+            LoadNguoiThucHien();
+            LoadTrangThai();
+            LoadPhanHe();
+            DuAn();
+
             //load data set gia tri 
-            List<Work> getAllWork = Retrofit.instance.getChiTietWork(id);
+            Work work = Retrofit.instance.getChiTietWork(id);
+            tbHangMuc.Text = work.HangMuc;
+            tbMoTa.Text = work.MoTa;
+            dateDead.DateTime = work.Deadline;
+            dateNgayBD.DateTime = work.NgayBatDau;
+            luedNguoiTH.EditValue = work.NguoiThucHien;
+            lueDuAn.EditValue = work.IdDuAn;
+            lueTrangThai.EditValue = work.Status;
+            lookUpEdit1.EditValue = work.PhanHe;
         }
 
         public FrmHTCV()
@@ -94,7 +106,7 @@ namespace qlcv
         private void btLuu_Click(object sender, EventArgs e)
         {
             
-            if (Them)
+            if (ID==null)
             {
                 //Thêm công việc
                 Work work = new Work();
@@ -104,12 +116,10 @@ namespace qlcv
                 work.PhanHe = lookUpEdit1.EditValue.ToString();
                 work.Deadline = dateDead.DateTime;
                 work.NgayBatDau = dateNgayBD.DateTime;
-                //work.Ngayhoanthanh=dateNgayHT.DateTime;
-                //work.Nguoithuchien=luedNguoiTH.Text;
                 work.NguoiThucHien = Int32.Parse(luedNguoiTH.EditValue.ToString());
                 work.TenDuAn = lueDuAn.EditValue.ToString();
                 work.Status = lueTrangThai.EditValue.ToString();
-                 
+               
 
                 StatusRespon status = Retrofit.instance.addWork(work);
                 MessageBox.Show(status.Message);
@@ -117,7 +127,20 @@ namespace qlcv
             }
             else
             {
-                
+                Work work = new Work();
+                work.ID = Int32.Parse(ID);
+                work.IdDuAn = lueDuAn.EditValue.ToString();
+                work.HangMuc = tbHangMuc.Text;
+                work.MoTa = tbMoTa.Text;
+                work.NguoiYeuCau = Retrofit.instance.getLoginUser().ID + "";
+                work.PhanHe = lookUpEdit1.EditValue.ToString();
+                work.Deadline = dateDead.DateTime;
+                work.NgayBatDau = dateNgayBD.DateTime;
+                work.NguoiThucHien = Int32.Parse(luedNguoiTH.EditValue.ToString());
+                work.TenDuAn = lueDuAn.EditValue.ToString();
+                work.Status = lueTrangThai.EditValue.ToString();
+                StatusRespon status = Retrofit.instance.updateWork(work);
+                MessageBox.Show(status.Message);
             }
         }
     }

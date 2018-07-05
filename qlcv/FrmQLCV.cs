@@ -22,7 +22,7 @@ namespace qlcv
         private void LoadCongViec()
         {
 
-            List<Work> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
+            List<WorkV2> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
             gridControl1.DataSource = allwork;
         }
 
@@ -40,7 +40,7 @@ namespace qlcv
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btSua_Click(object sender, EventArgs e)
@@ -59,23 +59,6 @@ namespace qlcv
             }
         }
 
-        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
-                e.Info.DisplayText = (e.RowHandle + 1).ToString();
-        }
-
-        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
-                e.Appearance.BackColor = Color.LightYellow;
-        }
-
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {
-
-        }
-
         private void btThem_Click(object sender, EventArgs e)
         {
             FrmHTCV frm = new FrmHTCV();
@@ -83,7 +66,7 @@ namespace qlcv
         }
         private void LoadWork(string id)
         {
-            List<Work> works = Retrofit.instance.getAllWork(id);
+            List<WorkV2> works = Retrofit.instance.getAllWork(id);
             gridControl1.DataSource = works;
         }
 
@@ -101,7 +84,7 @@ namespace qlcv
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-            string hangmuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Hangmuc").ToString();
+            string hangmuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
             DialogResult result = MessageBox.Show("Xóa "+hangmuc+"?", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -118,6 +101,11 @@ namespace qlcv
                 }
                 LoadCongViec();
             }
+        }
+
+        private void btSua_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
         }
     }
 }

@@ -66,7 +66,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(869, 143);
+            this.ribbon.Size = new System.Drawing.Size(879, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -158,10 +158,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 464);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 495);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(869, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(879, 31);
             // 
             // layoutControl1
             // 
@@ -169,7 +169,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 143);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(869, 321);
+            this.layoutControl1.Size = new System.Drawing.Size(879, 352);
             this.layoutControl1.TabIndex = 5;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -179,14 +179,14 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(869, 321);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(879, 352);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 495);
+            this.ClientSize = new System.Drawing.Size(879, 526);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
