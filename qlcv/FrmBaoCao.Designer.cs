@@ -172,7 +172,7 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Người thực hiện";
-            this.gridColumn8.FieldName = "NameNguoiThucHien";
+            this.gridColumn8.FieldName = "NguoiThucHien";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;

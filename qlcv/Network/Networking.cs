@@ -6,6 +6,7 @@ using System.Net;
 using System.Collections.Specialized;
 using Newtonsoft.Json;
 using System.IO;
+using System.Windows.Forms;
 
 namespace qlcv.Network
 {
@@ -32,17 +33,30 @@ namespace qlcv.Network
         {
             using (var client = new WebClient())
             {
-                client.Headers.Set("token", token);
-                //var values = new NameValueCollection();
-                //values["thing1"] = "hello";
-                //values["thing2"] = "world";
-                var response = client.UploadValues(url, values);
-
-                return Encoding.Default.GetString(response);
+                try
+                {
+                    client.Headers.Set("token", token);
+                    //var values = new NameValueCollection();
+                    //values["thing1"] = "hello";
+                    //values["thing2"] = "world";
+                    var response = client.UploadValues(url, values);
+                    Cursor.Current = Cursors.WaitCursor;
+                    string s = Encoding.Default.GetString(response);
+                    Cursor.Current = Cursors.Arrow;
+                    return s;
+                }
+                catch (Exception ex)
+                {
+                    if (ex.ToString().Equals("Unable to connect to the remote server")) ;
+                    MessageBox.Show("Không thể kết nối tới sever vui lòng thử lại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return null;
+                }
+               
             }
         }
         public  string PostV2(string url,Object obj)
         {
+            Cursor.Current = Cursors.WaitCursor;
             var http = (HttpWebRequest)WebRequest.Create(new Uri(url));
             http.Accept = "application/json";
             http.ContentType = "application/json";
@@ -61,16 +75,21 @@ namespace qlcv.Network
 
             var stream = response.GetResponseStream();
             var sr = new StreamReader(stream);
-            return sr.ReadToEnd();
+            string s= sr.ReadToEnd();
+            Cursor.Current = Cursors.Arrow;
+            return s;
            
         }
         public string Get(string url)
         {
+            Cursor.Current = Cursors.WaitCursor;
             using (var client = new WebClient())
             {
                 client.Headers.Set("token", token);
                 client.Encoding = Encoding.UTF8;
-                return client.DownloadString(url);
+                string s= client.DownloadString(url);
+                Cursor.Current = Cursors.Arrow;
+                return s;
             }
         }
     }

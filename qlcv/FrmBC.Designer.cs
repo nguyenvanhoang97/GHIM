@@ -64,24 +64,24 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(562, 48, 450, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(311, 276);
+            this.layoutControl1.Size = new System.Drawing.Size(474, 310);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(64, 57);
+            this.label1.Location = new System.Drawing.Point(96, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 51);
+            this.label1.Size = new System.Drawing.Size(281, 58);
             this.label1.TabIndex = 6;
             this.label1.Text = "Bạn có muốn báo cáo hoàn thành!!";
             // 
             // btCo
             // 
             this.btCo.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_checkmark_48;
-            this.btCo.Location = new System.Drawing.Point(188, 167);
+            this.btCo.Location = new System.Drawing.Point(286, 188);
             this.btCo.Name = "btCo";
-            this.btCo.Size = new System.Drawing.Size(58, 51);
+            this.btCo.Size = new System.Drawing.Size(91, 58);
             this.btCo.StyleController = this.layoutControl1;
             this.btCo.TabIndex = 5;
             this.btCo.Text = "Có";
@@ -90,9 +90,9 @@
             // btKhong
             // 
             this.btKhong.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_delete_48__1_;
-            this.btKhong.Location = new System.Drawing.Point(64, 167);
+            this.btKhong.Location = new System.Drawing.Point(96, 188);
             this.btKhong.Name = "btKhong";
-            this.btKhong.Size = new System.Drawing.Size(58, 51);
+            this.btKhong.Size = new System.Drawing.Size(91, 58);
             this.btKhong.StyleController = this.layoutControl1;
             this.btKhong.TabIndex = 4;
             this.btKhong.Text = "Không";
@@ -142,18 +142,18 @@
             rowDefinition4,
             rowDefinition5});
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(311, 276);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(474, 310);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btKhong;
-            this.layoutControlItem1.Location = new System.Drawing.Point(62, 165);
+            this.layoutControlItem1.Location = new System.Drawing.Point(94, 186);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(43, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem1.Size = new System.Drawing.Size(62, 55);
+            this.layoutControlItem1.Size = new System.Drawing.Size(95, 62);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -161,12 +161,12 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btCo;
-            this.layoutControlItem2.Location = new System.Drawing.Point(186, 165);
+            this.layoutControlItem2.Location = new System.Drawing.Point(284, 186);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(26, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.ColumnIndex = 3;
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem2.Size = new System.Drawing.Size(62, 55);
+            this.layoutControlItem2.Size = new System.Drawing.Size(95, 62);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
@@ -174,12 +174,12 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.label1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(62, 55);
+            this.layoutControlItem3.Location = new System.Drawing.Point(94, 62);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem3.Size = new System.Drawing.Size(186, 55);
+            this.layoutControlItem3.Size = new System.Drawing.Size(285, 62);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -187,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 276);
+            this.ClientSize = new System.Drawing.Size(474, 310);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FrmBC";
             this.Text = "Báo cáo";

@@ -107,5 +107,14 @@ namespace qlcv
         {
 
         }
+
+        private void btBaoLoi_Click(object sender, EventArgs e)
+        {
+            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+            string hm = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
+            FrmBaoLoi frmBL = new FrmBaoLoi(id);
+            frmBL.Text = "Báo lỗi hạng mục " + hm;
+            frmBL.ShowDialog();
+        }
     }
 }

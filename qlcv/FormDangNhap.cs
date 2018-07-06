@@ -24,22 +24,13 @@ namespace qlcv
             string password = textBoxMK.Text;
             User login = Retrofit.instance.Login(username, password);
             Console.Write(login);
+           
             if (login.status)
             {
-                if (login.IsAdmin)
-                {
-                    Networking.getInstance().setToken(login.Token);
-                    frmMain frMenu = new frmMain();
-                    frMenu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    Networking.getInstance().setToken(login.Token);
-                    FrmBaoCao frBC = new FrmBaoCao();
-                    frBC.Show();
-                    this.Hide();
-                }
+                Networking.getInstance().setToken(login.Token);
+                frmMain frMenu = new frmMain(login.IsAdmin);
+                frMenu.Show();
+                this.Hide();
             }
             else
             {

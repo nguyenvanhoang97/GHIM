@@ -27,7 +27,11 @@ namespace qlcv.Network
             login["username"] = username;
             login["password"] = password;
             string json = Networking.getInstance().Post(BASE_URL + "api/user/login", login);
-            userLogin = JsonConvert.DeserializeObject<User>(json);
+            if (json != null)
+            {
+                userLogin = JsonConvert.DeserializeObject<User>(json);
+            }
+                
             return userLogin;
         }
         //user
@@ -117,6 +121,19 @@ namespace qlcv.Network
         {
             string json = Networking.getInstance().Get(BASE_URL + "api/phanhe/getAll");
             return JsonConvert.DeserializeObject<List<PhanHe>>(json);
+        }
+        //Báo lỗi
+        public StatusRespon BaoLoi(BaoLoi baoLoi)
+        {
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/work/baoloi", baoLoi);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
+        }
+        //lấy ghim
+        public List<Ghim> Ghim(DateTime TuNgay,DateTime DenNgay )
+        {
+            LocOBJ loc = new LocOBJ(TuNgay, DenNgay);
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/ghim/ghimhoiha", loc);
+            return JsonConvert.DeserializeObject<List<Ghim>>(json);
         }
     }
 }

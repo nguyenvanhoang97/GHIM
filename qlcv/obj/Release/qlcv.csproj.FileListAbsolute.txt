@@ -90,3 +90,5 @@ C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Release
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Release\qlcv.exe.licenses
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Release\qlcv.exe
 C:\Users\HoangNguyen\documents\visual studio 2015\Projects\qlcv\qlcv\obj\Release\qlcv.pdb
+E:\Visual\GHIM\qlcv\obj\Release\qlcv.exe
+E:\Visual\GHIM\qlcv\obj\Release\qlcv.pdb
