@@ -34,7 +34,7 @@ namespace qlcv
             }
             else
             {
-                MessageBox.Show("Ten tai khoan hoac mat khau khong dung");
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng","Thông báo");
             }
         }
     }

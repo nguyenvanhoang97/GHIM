@@ -65,5 +65,7 @@ namespace qlcv
             if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
                 e.Appearance.BackColor = Color.LightYellow;
         }
+
+      
     }
 }

@@ -17,6 +17,7 @@ namespace qlcv
         {
             InitializeComponent();
             DuAn();
+            LoadMau();
         }
         private void DuAn()
         {
@@ -24,6 +25,11 @@ namespace qlcv
             lueDuAn.Properties.DataSource = allDuAn;
             lueDuAn.Properties.ValueMember = "ID";
             lueDuAn.Properties.DisplayMember = "TenDuAn";
+        }
+        private void LoadMau()
+        {
+            layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
+           
         }
 
         private void LoadCongViec()
@@ -63,9 +69,7 @@ namespace qlcv
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-            FrmBC frm = new FrmBC(id);
-            frm.ShowDialog();
+           
         }
         private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
@@ -77,6 +81,22 @@ namespace qlcv
         {
             if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
                 e.Appearance.BackColor = Color.LightYellow;
+        }
+
+        private void báoHoànThànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dl = MessageBox.Show("Bạn có chắc chắn muốn hoàn thành công việc này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+                StatusRespon status = Retrofit.instance.doneWork(id);
+                MessageBox.Show(status.Message);
+            }
+            else
+            {
+                return;
+            }
+            
         }
     }
 }

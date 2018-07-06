@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache.cs" />
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,12 @@
     <Compile Include="FrmBaoCao.Designer.cs">
       <DependentUpon>FrmBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaoCaoTongHopGhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoTongHopGhim.Designer.cs">
+      <DependentUpon>frmBaoCaoTongHopGhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBaoLoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +90,12 @@
     </Compile>
     <Compile Include="FrmBC.Designer.cs">
       <DependentUpon>FrmBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDuAn.cs">
       <SubType>Form</SubType>
@@ -129,17 +142,24 @@
     <Compile Include="Reponses\User.cs" />
     <Compile Include="Reponses\StatusRespon.cs" />
     <Compile Include="Reponses\WorkV2.cs" />
+    <Compile Include="Setting.cs" />
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoCao.resx">
       <DependentUpon>FrmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoTongHopGhim.resx">
+      <DependentUpon>frmBaoCaoTongHopGhim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoLoi.resx">
       <DependentUpon>FrmBaoLoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBC.resx">
       <DependentUpon>FrmBC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDuAn.resx">
       <DependentUpon>FrmDuAn.cs</DependentUpon>
@@ -181,6 +201,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\qlcv.csproj.GenerateResource.Cache" />
@@ -265,6 +286,8 @@
     <Content Include="obj\Release\qlcv.exe.licenses" />
     <Content Include="obj\Release\qlcv.pdb" />
     <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\if_filter_173013 %282%29.png" />
+    <None Include="Resources\if_filter_173013 %281%29.png" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\icons8-checkmark-48.png" />
   </ItemGroup>

@@ -17,6 +17,7 @@ namespace qlcv
         {
             InitializeComponent();
             DuAn();
+            LoadMau();
         }
         string id;
         private void LoadCongViec()
@@ -24,6 +25,11 @@ namespace qlcv
 
             List<WorkV2> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
             gridControl1.DataSource = allwork;
+        }
+        private void LoadMau()
+        {
+            layoutControlGroup1.AppearanceGroup.BorderColor = Setting.GroupColor();
+
         }
 
         public void Hien()

@@ -23,15 +23,28 @@ namespace qlcv
             this.IsAdmin = IsAdmin;
             LoadNgay();
             LoadPhanQuyen();
+            LoadMau();
+        }
+        private void LoadNgayGioHeThong()
+        {
+            DateTime now = DateTime.Now;
+            txtNgayGioHeThong.Caption = now.ToString("HH:mm:ss   dd-MM-yyyy");
         }
         private void LoadPhanQuyen()
         {
+            txtTaiKhoan.Caption = "Chúc "+Cache.username+" có một ngày tốt lành!";
             if (!IsAdmin)
             {
                 btCongViec.Enabled = false;
                 btDuAn.Enabled = false;
                 btNhanVien.Enabled = false;
+                
             }
+        }
+        private void LoadMau()
+        {
+            layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
+
         }
         private void LoadNgay()
         {
@@ -118,6 +131,33 @@ namespace qlcv
         {
             FrmBaoCao frmBC = new FrmBaoCao();
             frmBC.ShowDialog();
+        }
+
+        private void btBaoCaoTongHopGhim_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmBaoCaoTongHopGhim frm = new frmBaoCaoTongHopGhim();
+            frm.Show();
+        }
+
+        private void btLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dl = MessageBox.Show("Bạn có chắc chắn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dl == DialogResult.Yes)
+            {
+                frmDangNhap frm = new frmDangNhap();
+                frm.Show();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            txtNgayGioHeThong.Caption = now.ToString("HH:mm:ss   dd-MM-yyyy");
         }
     }
 }
