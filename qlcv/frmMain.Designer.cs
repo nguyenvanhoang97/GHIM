@@ -49,6 +49,7 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.btBaoCaoChiTietGhim = new DevExpress.XtraBars.BarButtonItem();
             this.btBaoCaoTongHopGhim = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
@@ -58,6 +59,9 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.txtNgayGioHeThong = new DevExpress.XtraBars.BarStaticItem();
+            this.txtTaiKhoan = new DevExpress.XtraBars.BarStaticItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -78,9 +82,6 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtTaiKhoan = new DevExpress.XtraBars.BarStaticItem();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -123,10 +124,11 @@
             this.txtNgayGioHeThong,
             this.txtTaiKhoan,
             this.skinRibbonGalleryBarItem1,
-            this.skinRibbonGalleryBarItem2});
+            this.skinRibbonGalleryBarItem2,
+            this.btBaoCaoChiTietGhim});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.txtTaiKhoan);
             this.ribbon.PageHeaderItemLinks.Add(this.txtNgayGioHeThong);
@@ -213,9 +215,16 @@
             this.barSubItem2.Id = 10;
             this.barSubItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.Image")));
             this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btBaoCaoChiTietGhim),
             new DevExpress.XtraBars.LinkPersistInfo(this.btBaoCaoTongHopGhim)});
             this.barSubItem2.Name = "barSubItem2";
             this.barSubItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btBaoCaoChiTietGhim
+            // 
+            this.btBaoCaoChiTietGhim.Caption = "Báo cáo chi tiết ghim";
+            this.btBaoCaoChiTietGhim.Id = 23;
+            this.btBaoCaoChiTietGhim.Name = "btBaoCaoChiTietGhim";
             // 
             // btBaoCaoTongHopGhim
             // 
@@ -245,10 +254,11 @@
             this.barButtonItem3.Caption = "Đổi mật khẩu";
             this.barButtonItem3.Id = 14;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick_1);
             // 
             // btLogout
             // 
-            this.btLogout.Caption = "barButtonItem6";
+            this.btLogout.Caption = "Đăng xuất";
             this.btLogout.Id = 15;
             this.btLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btLogout.ImageOptions.Image")));
             this.btLogout.Name = "btLogout";
@@ -276,6 +286,23 @@
             // 
             this.txtNgayGioHeThong.Id = 18;
             this.txtNgayGioHeThong.Name = "txtNgayGioHeThong";
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Id = 20;
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 21;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // skinRibbonGalleryBarItem2
+            // 
+            this.skinRibbonGalleryBarItem2.Caption = "Chủ đề";
+            this.skinRibbonGalleryBarItem2.Id = 22;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
             // 
             // ribbonPage1
             // 
@@ -354,6 +381,7 @@
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 7;
             this.simpleButton1.Text = "Lọc";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // deDenNgay
             // 
@@ -366,9 +394,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deDenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deDenNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy hh:mm:ss";
+            this.deDenNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.deDenNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.deDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy hh:mm:ss";
+            this.deDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
             this.deDenNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.deDenNgay.Size = new System.Drawing.Size(131, 22);
             this.deDenNgay.StyleController = this.layoutControl1;
@@ -385,9 +413,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deTuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deTuNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy hh:mm:ss";
+            this.deTuNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.deTuNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.deTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy hh:mm:ss";
+            this.deTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
             this.deTuNgay.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.deTuNgay.Size = new System.Drawing.Size(131, 22);
             this.deTuNgay.StyleController = this.layoutControl1;
@@ -504,23 +532,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtTaiKhoan
-            // 
-            this.txtTaiKhoan.Id = 20;
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            // 
-            // skinRibbonGalleryBarItem1
-            // 
-            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-            this.skinRibbonGalleryBarItem1.Id = 21;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
-            // 
-            // skinRibbonGalleryBarItem2
-            // 
-            this.skinRibbonGalleryBarItem2.Caption = "Chủ đề";
-            this.skinRibbonGalleryBarItem2.Id = 22;
-            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -601,5 +612,6 @@
         private DevExpress.XtraBars.BarStaticItem txtTaiKhoan;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.BarButtonItem btBaoCaoChiTietGhim;
     }
 }

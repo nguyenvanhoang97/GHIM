@@ -7,12 +7,12 @@ namespace qlcv.Reponses
 {
     public class LocOBJ
     {
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public string Start { get; set; }
+        public string End { get; set; }
         /// <summary>Record Constructor</summary>
         /// <param name="start"><see cref="Start"/></param>
         /// <param name="end"><see cref="End"/></param>
-        public LocOBJ(DateTime start, DateTime end)
+        public LocOBJ(string start, string end)
         {
             Start = start;
             End = end;

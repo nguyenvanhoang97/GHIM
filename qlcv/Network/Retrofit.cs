@@ -131,7 +131,7 @@ namespace qlcv.Network
         //lấy ghim
         public List<Ghim> Ghim(DateTime TuNgay,DateTime DenNgay )
         {
-            LocOBJ loc = new LocOBJ(TuNgay, DenNgay);
+            LocOBJ loc = new LocOBJ(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"));
             string json = Networking.getInstance().PostV2(BASE_URL + "api/ghim/ghimhoiha", loc);
             return JsonConvert.DeserializeObject<List<Ghim>>(json);
         }

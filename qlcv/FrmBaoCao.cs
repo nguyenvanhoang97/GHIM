@@ -19,6 +19,7 @@ namespace qlcv
             DuAn();
             LoadMau();
         }
+        List<WorkV2> allwork = new List<WorkV2>();
         private void DuAn()
         {
             List<DuAn> allDuAn = Retrofit.instance.getAllDuAn();
@@ -34,7 +35,7 @@ namespace qlcv
 
         private void LoadCongViec()
         {
-            List<WorkV2> allwork = Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
+            allwork= Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
             gridControl1.DataSource = allwork;
         }
 
@@ -91,12 +92,34 @@ namespace qlcv
                 string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
                 StatusRespon status = Retrofit.instance.doneWork(id);
                 MessageBox.Show(status.Message);
+                int index = gridView1.TopRowIndex;
+                int focusrow = gridView1.FocusedRowHandle;
+                gridView1.BeginDataUpdate();
+                if (status.Status)
+                {
+                    LoadCongViec();
+                    gridView1.FocusedRowHandle = focusrow;
+                    gridView1.TopRowIndex = index;
+                    gridView1.EndDataUpdate();
+                }
             }
             else
             {
                 return;
             }
             
+        }
+
+        private void gridView1_CustomDrawRowIndicator_1(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+        }
+
+        private void gridView1_RowCellStyle_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
+                e.Appearance.BackColor = Setting.RowColor();
         }
     }
 }

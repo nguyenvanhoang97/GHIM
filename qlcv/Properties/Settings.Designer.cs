@@ -46,5 +46,17 @@ namespace qlcv.Properties {
                 this["password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GhiNho {
+            get {
+                return ((bool)(this["GhiNho"]));
+            }
+            set {
+                this["GhiNho"] = value;
+            }
+        }
     }
 }

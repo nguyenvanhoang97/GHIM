@@ -74,9 +74,10 @@ namespace qlcv
                 // Access the type-specific options of the diagram.
                 if (listGhim.Count > 0)
                 {
+
+                    //((StackedBarSeriesView)series1.View).Transparency = 160;
                     // Access the view-type-specific options of the series.
                     ((StackedBarSeriesView)series1.View).BarWidth = 0.8;
-
                     // Access the type-specific options of the diagram.
                     ((XYDiagram)chartBieuDo.Diagram).EnableAxisXZooming = true;
                 }
@@ -158,6 +159,17 @@ namespace qlcv
         {
             DateTime now = DateTime.Now;
             txtNgayGioHeThong.Caption = now.ToString("HH:mm:ss   dd-MM-yyyy");
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            LoadBieuDo();
+        }
+
+        private void barButtonItem3_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frmDoiMatKhau frm = new frmDoiMatKhau();
+            frm.Show();
         }
     }
 }

@@ -99,7 +99,7 @@ namespace qlcv
                 id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
                 string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Name").ToString();
                 string diaChi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DiaChi").ToString();
-                string mail = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail").ToString();
+                string mail = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail")!=null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mail").ToString():"";
                 string username = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username").ToString();
                 string pass = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString();
                 bool isAdmin = bool.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IsAdmin").ToString());

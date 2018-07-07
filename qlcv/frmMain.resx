@@ -182,16 +182,16 @@
   </data>
   <data name="simpleButton1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAHLSURBVDhPY8AH7O3tOWxsbASdnJykQRjE9vDwYIdKEwYW
-        FhbS9vaOJZGRkStycnIONzU1XZw0adLtefPm3QPhyZMn3wKJgeSioqKWOzg4F4H0QLWjArfwhKgtO3Z9
-        evny1f9v377///v3H14MUvPixcv/6zfv/GgfEhUKNQYBTJJqq9Knrv2/at+J/9euX/9/7969/0+fPv3/
-        5vXr/58/fwZjEBskBpIDqVm5+8T/jN51/w2CyiugxiCAePEibsnGzac5Zr/6Lzbl9n/jWVf/e8w++z9o
-        9vH/4dP3/4+Yuv9/8Izj/92nnftvPOHqf7G22/852l//l8ldf0wldxv2cDWLTpGRrN9yimHJ//8Mi4B4
-        ARDPA+I5QDwTiKcD8VQgngzEE/+DDTP3TRaHascOLOLSpaWqN58iZKBMARGGwQDIUMmaLSdxGShTSIJh
-        MGDllyQlWbXpBLqBMkVkGAYD1j6xcsKNRw7DDBSr3H/QwjsOe7ojFuiktOeyT3z5n7P/xX+dpLYMqDD5
-        QCe+OZdj0sv/HH0v/mvHNGRChckHowYOQgP1YqpL+LpuUM9A+/h4Ds2kthK15EkHdKMqo6DClIPQ0FA2
-        wsU/AwMAIABkIv+XmG8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAActJREFUOE9jwAfs7e05bGxsBJ2cnKRBGMT28PBgh0oTBhYWFtL29o4lkZGRK3Jy
+        cg43NTVdnDRp0u158+bdA+HJkyffAomB5KKiopY7ODgXgfRAtaMCt/CEqC07dn16+fLV/2/fvv//+/cf
+        XgxS8+LFy//rN+/8aB8SFQo1BgFMkmqr0qeu/b9q34n/165f/3/v3r3/T58+/f/m9ev/nz9/BmMQGyQG
+        kgOpWbn7xP+M3nX/DYLKK6DGIIB48SJuycbNpzlmv/ovNuX2f+NZV/97zD77P2j28f/h0/f/j5i6/3/w
+        jOP/3aed+2884ep/sbbb/znaX/+XyV1/TCV3G/ZwNYtOkZGs33KKYcn//wyLgHgBEM8D4jlAPBOIpwPx
+        VCCeDMQT/4MNM/dNFodqxw4s4tKlpao3nyJkoEwBEYbBAMhQyZotJ3EZKFNIgmEwYOWXJCVZtekEuoEy
+        RWQYBgPWPrFywo1HDsMMFKvcf9DCOw57uiMW6KS057JPfPmfs//Ff52ktgyoMPlAJ745l2PSy/8cfS/+
+        a8c0ZEKFyQejBg5CA/Viqkv4um5Qz0D7+HgOzaS2ErXkSQd0oyqjoMKUg9DQUDbCxT8DAwAgAGQi/5eY
+        bwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

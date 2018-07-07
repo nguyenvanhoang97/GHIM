@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition21 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition22 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition23 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition24 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition25 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition26 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition27 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition28 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition29 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition30 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition31 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition32 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition17 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition18 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition19 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition20 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition5 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition6 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition7 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition8 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition9 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition10 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition11 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition12 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition13 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition14 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition15 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition16 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.báoHoànThànhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HangMuc = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,9 +76,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.báoHoànThànhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btXoa)).BeginInit();
@@ -88,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -107,6 +107,21 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.báoHoànThànhToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(183, 28);
+            // 
+            // báoHoànThànhToolStripMenuItem
+            // 
+            this.báoHoànThànhToolStripMenuItem.Name = "báoHoànThànhToolStripMenuItem";
+            this.báoHoànThànhToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.báoHoànThànhToolStripMenuItem.Text = "Báo hoàn thành";
+            this.báoHoànThànhToolStripMenuItem.Click += new System.EventHandler(this.báoHoànThànhToolStripMenuItem_Click);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -124,6 +139,8 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView1_CustomDrawRowIndicator_1);
+            this.gridView1.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView1_RowCellStyle_1);
             // 
             // ID
             // 
@@ -237,9 +254,9 @@
             this.btSua.AppearanceReadOnly.Image = global::qlcv.Properties.Resources.icons8_pencil_16;
             this.btSua.AppearanceReadOnly.Options.UseImage = true;
             this.btSua.AutoHeight = false;
-            editorButtonImageOptions3.Image = global::qlcv.Properties.Resources.icons8_pencil_16;
+            editorButtonImageOptions1.Image = global::qlcv.Properties.Resources.icons8_pencil_16;
             this.btSua.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions3, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.btSua.Name = "btSua";
             this.btSua.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btSua.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btSua_ButtonClick);
@@ -250,9 +267,9 @@
             this.btXoa.AppearanceReadOnly.Image = global::qlcv.Properties.Resources.icons8_delete_16;
             this.btXoa.AppearanceReadOnly.Options.UseImage = true;
             this.btXoa.AutoHeight = false;
-            editorButtonImageOptions4.Image = global::qlcv.Properties.Resources.icons8_delete_16;
+            editorButtonImageOptions2.Image = global::qlcv.Properties.Resources.icons8_delete_16;
             this.btXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions4, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.btXoa.Name = "btXoa";
             this.btXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -305,53 +322,53 @@
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            columnDefinition21.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition21.Width = 20D;
-            columnDefinition22.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition22.Width = 14.285714285714285D;
-            columnDefinition23.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition23.Width = 14.285714285714285D;
-            columnDefinition24.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition24.Width = 20D;
-            columnDefinition25.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition25.Width = 14.285714285714285D;
-            columnDefinition26.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition26.Width = 14.285714285714285D;
-            columnDefinition27.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition27.Width = 20D;
-            columnDefinition28.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition28.Width = 14.285714285714285D;
-            columnDefinition29.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition29.Width = 14.285714285714285D;
-            columnDefinition30.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition30.Width = 20D;
-            columnDefinition31.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition31.Width = 14.285714285714285D;
-            columnDefinition32.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition32.Width = 20D;
+            columnDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition5.Width = 20D;
+            columnDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition6.Width = 14.285714285714285D;
+            columnDefinition7.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition7.Width = 14.285714285714285D;
+            columnDefinition8.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition8.Width = 20D;
+            columnDefinition9.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition9.Width = 14.285714285714285D;
+            columnDefinition10.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition10.Width = 14.285714285714285D;
+            columnDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition11.Width = 20D;
+            columnDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition12.Width = 14.285714285714285D;
+            columnDefinition13.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition13.Width = 14.285714285714285D;
+            columnDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition14.Width = 20D;
+            columnDefinition15.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition15.Width = 14.285714285714285D;
+            columnDefinition16.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition16.Width = 20D;
             this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition21,
-            columnDefinition22,
-            columnDefinition23,
-            columnDefinition24,
-            columnDefinition25,
-            columnDefinition26,
-            columnDefinition27,
-            columnDefinition28,
-            columnDefinition29,
-            columnDefinition30,
-            columnDefinition31,
-            columnDefinition32});
-            rowDefinition6.Height = 35D;
-            rowDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition7.Height = 35D;
-            rowDefinition7.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition8.Height = 100D;
-            rowDefinition8.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition5,
+            columnDefinition6,
+            columnDefinition7,
+            columnDefinition8,
+            columnDefinition9,
+            columnDefinition10,
+            columnDefinition11,
+            columnDefinition12,
+            columnDefinition13,
+            columnDefinition14,
+            columnDefinition15,
+            columnDefinition16});
+            rowDefinition2.Height = 35D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition3.Height = 35D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition4.Height = 100D;
+            rowDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition6,
-            rowDefinition7,
-            rowDefinition8});
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4});
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(1172, 548);
             this.layoutControlGroup1.TextVisible = false;
@@ -380,23 +397,23 @@
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.OptionsItemText.TextToControlDistance = 4;
-            columnDefinition17.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition17.Width = 300D;
-            columnDefinition18.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition18.Width = 80D;
-            columnDefinition19.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            columnDefinition19.Width = 20D;
-            columnDefinition20.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            columnDefinition20.Width = 764D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition1.Width = 300D;
+            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition2.Width = 80D;
+            columnDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            columnDefinition3.Width = 20D;
+            columnDefinition4.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            columnDefinition4.Width = 764D;
             this.layoutControlGroup2.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition17,
-            columnDefinition18,
-            columnDefinition19,
-            columnDefinition20});
-            rowDefinition5.Height = 100D;
-            rowDefinition5.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1,
+            columnDefinition2,
+            columnDefinition3,
+            columnDefinition4});
+            rowDefinition1.Height = 100D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup2.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition5});
+            rowDefinition1});
             this.layoutControlGroup2.OptionsTableLayoutItem.ColumnSpan = 12;
             this.layoutControlGroup2.OptionsTableLayoutItem.RowSpan = 2;
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -430,21 +447,6 @@
             this.gridColumn11.Caption = "Xóa";
             this.gridColumn11.Name = "gridColumn11";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.báoHoànThànhToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(183, 28);
-            // 
-            // báoHoànThànhToolStripMenuItem
-            // 
-            this.báoHoànThànhToolStripMenuItem.Name = "báoHoànThànhToolStripMenuItem";
-            this.báoHoànThànhToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
-            this.báoHoànThànhToolStripMenuItem.Text = "Báo hoàn thành";
-            this.báoHoànThànhToolStripMenuItem.Click += new System.EventHandler(this.báoHoànThànhToolStripMenuItem_Click);
-            // 
             // FrmBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -454,7 +456,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBaoCao";
             this.Text = "Quản lý hạng mục công việc";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btXoa)).EndInit();
@@ -466,7 +470,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

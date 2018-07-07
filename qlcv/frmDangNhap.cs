@@ -63,6 +63,7 @@ namespace qlcv
         {
             textBoxTK.Text = Properties.Settings.Default.user;
             textBoxMK.Text = Properties.Settings.Default.password;
+            cbGhiNho.Checked = textBoxTK.Text != "" && textBoxMK.Text != "";
         }
     }
 }
