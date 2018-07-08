@@ -79,7 +79,7 @@
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.Location = new System.Drawing.Point(230, 70);
+            this.txtMatKhauCu.Location = new System.Drawing.Point(238, 71);
             this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(180, 23);
@@ -88,7 +88,7 @@
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(230, 108);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(238, 109);
             this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(180, 23);
@@ -98,7 +98,7 @@
             // 
             // txtNhapLaiMatKhau
             // 
-            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(230, 142);
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(238, 143);
             this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(180, 23);
@@ -141,7 +141,7 @@
             this.lbMatKhau.AutoSize = true;
             this.lbMatKhau.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.lbMatKhau.ForeColor = System.Drawing.Color.Red;
-            this.lbMatKhau.Location = new System.Drawing.Point(429, 108);
+            this.lbMatKhau.Location = new System.Drawing.Point(437, 109);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(0, 17);
             this.lbMatKhau.TabIndex = 9;
@@ -151,7 +151,7 @@
             this.lbNhapLaiMK.AutoSize = true;
             this.lbNhapLaiMK.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.lbNhapLaiMK.ForeColor = System.Drawing.Color.Red;
-            this.lbNhapLaiMK.Location = new System.Drawing.Point(429, 146);
+            this.lbNhapLaiMK.Location = new System.Drawing.Point(437, 147);
             this.lbNhapLaiMK.Name = "lbNhapLaiMK";
             this.lbNhapLaiMK.Size = new System.Drawing.Size(0, 17);
             this.lbNhapLaiMK.TabIndex = 10;

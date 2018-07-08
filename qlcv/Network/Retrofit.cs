@@ -9,7 +9,7 @@ namespace qlcv.Network
 {
     class Retrofit
     {
-        private string BASE_URL = "http://10.100.1.36:6788/";
+        private string BASE_URL = "https://dmhoang.herokuapp.com/";
         private User userLogin;
 
         public static Retrofit instance = new Retrofit();
@@ -134,6 +134,24 @@ namespace qlcv.Network
             LocOBJ loc = new LocOBJ(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"));
             string json = Networking.getInstance().PostV2(BASE_URL + "api/ghim/ghimhoiha", loc);
             return JsonConvert.DeserializeObject<List<Ghim>>(json);
+        }
+        public List<BaoCaoChiTietGhimOBJ> BaoCaoChiTietGhim(DateTime TuNgay, DateTime DenNgay,int ID)
+        {
+            ParameterBaoCaoChiTietGhim pa = new ParameterBaoCaoChiTietGhim(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"), ID);
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baoCaoChiTietGhim", pa);
+            return JsonConvert.DeserializeObject<List<BaoCaoChiTietGhimOBJ>>(json);
+        }
+        public List<LoaiGhimOBJ> LoaiGhim()
+        {
+
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/getAllGhim", new Object());
+            return JsonConvert.DeserializeObject<List<LoaiGhimOBJ>>(json);
+        }
+        public List<BaoCaoTongHopGhim> BaoCaoTongHopGhim(DateTime TuNgay, DateTime DenNgay, int ID,int IDLoaiGhim)
+        {
+            ParameterBaoCaoTongHopGhim pa = new ParameterBaoCaoTongHopGhim(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"), ID, IDLoaiGhim);
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baoCaoTHGhim", pa);
+            return JsonConvert.DeserializeObject<List<BaoCaoTongHopGhim>>(json);
         }
     }
 }

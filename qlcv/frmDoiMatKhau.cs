@@ -28,42 +28,11 @@ namespace qlcv
         }
         private void btDoiMatKhau_Click(object sender, EventArgs e)
         {
-            string matKhauCu, matKhauMoi, nhapLaiMatKhauMoi,matKhauCuDB="";
+            string matKhauCu, matKhauMoi, nhapLaiMatKhauMoi;
             matKhauMoi = txtMatKhauMoi.Text;
             nhapLaiMatKhauMoi = txtNhapLaiMatKhau.Text;
             matKhauCu = txtMatKhauCu.Text;
-            try
-            {
-                //Lấy pass cũ ở db
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            
-            if ((txtMatKhauMoi.Text == "") || (txtNhapLaiMatKhau.Text == "")||(txtMatKhauCu.Text==""))
-            {
-                MessageBox.Show("Vui lòng nhập đủ 3 trường tài khoản,mật khẩu và nhập lại mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if(txtMatKhauCu.Text=="")
-                {
-                    txtMatKhauCu.Focus();
-                }
-                else if (txtMatKhauMoi.Text == "")
-                {
-                    txtMatKhauMoi.Focus();
-                }
-               else if (txtNhapLaiMatKhau.Text == "")
-                {
-                    txtNhapLaiMatKhau.Focus();
-                }
-            }
-            else if (matKhauCu!= matKhauCuDB)
-            {
-                lbLoi.Text = "Mật khẩu cũ không đúng vui lòng kiểm tra lại!";
-            }
-            else if(matKhauMoi!=nhapLaiMatKhauMoi)
+            if(matKhauMoi!=nhapLaiMatKhauMoi)
             {
                 lbLoi.Text = "Mật khẩu nhập lại không khớp vui lòng kiểm tra lại!";
             }

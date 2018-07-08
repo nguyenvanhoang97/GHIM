@@ -63,7 +63,6 @@
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -225,6 +224,7 @@
             this.btBaoCaoChiTietGhim.Caption = "Báo cáo chi tiết ghim";
             this.btBaoCaoChiTietGhim.Id = 23;
             this.btBaoCaoChiTietGhim.Name = "btBaoCaoChiTietGhim";
+            this.btBaoCaoChiTietGhim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btBaoCaoChiTietGhim_ItemClick);
             // 
             // btBaoCaoTongHopGhim
             // 
@@ -248,6 +248,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
             this.barSubItem3.Name = "barSubItem3";
             this.barSubItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barSubItem3.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barButtonItem3
             // 
@@ -307,7 +308,6 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
@@ -316,13 +316,9 @@
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Quản lý ghim";
             // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem3);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barSubItem3);
             this.ribbonPageGroup1.ItemLinks.Add(this.btCongViec);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
@@ -606,7 +602,6 @@
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraBars.BarListItem barListItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarStaticItem txtNgayGioHeThong;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.BarStaticItem txtTaiKhoan;

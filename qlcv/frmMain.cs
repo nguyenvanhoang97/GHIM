@@ -61,23 +61,21 @@ namespace qlcv
                 wait.Show();
                 chartBieuDo.Series.Clear();
                 chartBieuDo.Titles.Clear();
+                chartBieuDo.DataSource = listGhim;
                 // Create four side-by-side stacked bar series.
                 Series series1 = new Series("Ghim", ViewType.StackedBar);
-
                 for (int i = 0; i < listGhim.Count; i++)
                 {
-
-                        series1.Points.Add(new SeriesPoint(listGhim[i].Name, listGhim[i].SoGhim));
+                    series1.Points.Add(new SeriesPoint(listGhim[i].Name, listGhim[i].SoGhim));
                 }
                 // Add all series to the chart.
-                chartBieuDo.Series.AddRange(new Series[] { series1 });
+                chartBieuDo.Series.AddRange(new Series[] { series1, });
                 // Access the type-specific options of the diagram.
                 if (listGhim.Count > 0)
                 {
-
-                    //((StackedBarSeriesView)series1.View).Transparency = 160;
                     // Access the view-type-specific options of the series.
                     ((StackedBarSeriesView)series1.View).BarWidth = 0.8;
+
                     // Access the type-specific options of the diagram.
                     ((XYDiagram)chartBieuDo.Diagram).EnableAxisXZooming = true;
                 }
@@ -93,7 +91,11 @@ namespace qlcv
 
                 //Add the chart to the form.
                 chartBieuDo.Dock = DockStyle.Fill;
-                
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -169,6 +171,12 @@ namespace qlcv
         private void barButtonItem3_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             frmDoiMatKhau frm = new frmDoiMatKhau();
+            frm.Show();
+        }
+
+        private void btBaoCaoChiTietGhim_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmBaoCaoChiTietGhim frm = new frmBaoCaoChiTietGhim();
             frm.Show();
         }
     }

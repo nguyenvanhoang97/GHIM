@@ -1,4 +1,4 @@
-﻿ using qlcv.Network;
+﻿using qlcv.Network;
 using qlcv.Reponses;
 using System;
 using System.Collections.Generic;
@@ -30,12 +30,12 @@ namespace qlcv
         private void LoadMau()
         {
             layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
-           
+
         }
 
         private void LoadCongViec()
         {
-            allwork= Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
+            allwork = Retrofit.instance.getAllWork(lueDuAn.EditValue.ToString());
             gridControl1.DataSource = allwork;
         }
 
@@ -45,7 +45,7 @@ namespace qlcv
             gridControl1.DataSource = works;
         }
 
-       
+
 
         private void btThem_Click(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace qlcv
 
         private void btSua_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
@@ -95,19 +95,12 @@ namespace qlcv
                 int index = gridView1.TopRowIndex;
                 int focusrow = gridView1.FocusedRowHandle;
                 gridView1.BeginDataUpdate();
-                if (status.Status)
-                {
-                    LoadCongViec();
-                    gridView1.FocusedRowHandle = focusrow;
-                    gridView1.TopRowIndex = index;
-                    gridView1.EndDataUpdate();
-                }
+                LoadCongViec();
+                gridView1.FocusedRowHandle = focusrow;
+                gridView1.TopRowIndex = index;
+                gridView1.EndDataUpdate();
             }
-            else
-            {
-                return;
-            }
-            
+
         }
 
         private void gridView1_CustomDrawRowIndicator_1(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)

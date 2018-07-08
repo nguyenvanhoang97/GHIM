@@ -73,6 +73,12 @@
     <Compile Include="FrmBaoCao.Designer.cs">
       <DependentUpon>FrmBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaoCaoChiTietGhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoChiTietGhim.Designer.cs">
+      <DependentUpon>frmBaoCaoChiTietGhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBaoCaoTongHopGhim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDuAn.cs">
       <SubType>Form</SubType>
@@ -132,10 +144,15 @@
     <Compile Include="objClass\GioiTinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponses\BaoCaoChiTietGhimOBJ.cs" />
+    <Compile Include="Reponses\BaoCaoTongHopGhim.cs" />
     <Compile Include="Reponses\BaoLoi.cs" />
     <Compile Include="Reponses\DuAn.cs" />
     <Compile Include="Reponses\Ghim.cs" />
+    <Compile Include="Reponses\LoaiGhimOBJ.cs" />
     <Compile Include="Reponses\LocOBJ.cs" />
+    <Compile Include="Reponses\ParameterBaoCaoChiTietGhim.cs" />
+    <Compile Include="Reponses\ParameterBaoCaoTongHopGhim.cs" />
     <Compile Include="Reponses\PhanHe.cs" />
     <Compile Include="Reponses\TrangThaiCongViec.cs" />
     <Compile Include="Reponses\Work.cs" />
@@ -149,6 +166,9 @@
     <EmbeddedResource Include="FrmBaoCao.resx">
       <DependentUpon>FrmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoChiTietGhim.resx">
+      <DependentUpon>frmBaoCaoChiTietGhim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoTongHopGhim.resx">
       <DependentUpon>frmBaoCaoTongHopGhim.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDuAn.resx">
       <DependentUpon>FrmDuAn.cs</DependentUpon>

@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using qlcv.Reponses;
+using qlcv.Network;
 
 namespace qlcv
 {
@@ -25,10 +27,52 @@ namespace qlcv
         private void frmBaoCaoAgentToltalCall_Load(object sender, EventArgs e)
         {
             LoadMau();
-            LoadNgay(); 
+            LoadNgay();
+            LoadNhanVien();
+            LoadLoaiGhim();
             LoadBaoCao();
+            
         }
+        private void LoadLoaiGhim()
+        {
 
+            List<LoaiGhimOBJ> allLoaiGhim = new List<LoaiGhimOBJ>();
+            LoaiGhimOBJ us = new LoaiGhimOBJ();
+            us.TenLoai = "Tất cả";
+            us.ID = 0;
+
+            allLoaiGhim = Retrofit.instance.LoaiGhim();
+            allLoaiGhim.Insert(0, us);
+            
+            luedLoaiGhim.Properties.DataSource = allLoaiGhim;
+            luedLoaiGhim.Properties.ValueMember = "ID";
+            luedLoaiGhim.Properties.DisplayMember = "TenLoai";
+
+            luedLoaiGhim.EditValue = 0;
+        }
+        private void LoadNhanVien()
+        {
+            DataTable nguoith = new DataTable();
+
+            List<User> alluser = new List<User>();
+            User us = new User();
+            us.Name = "Tất cả";
+            us.ID = 0;
+           
+            alluser = Retrofit.instance.getAllUser();
+            alluser.Insert(0, us);
+            nguoith.Columns.Add("ID", Type.GetType("System.Int32"));
+            nguoith.Columns.Add("Name", Type.GetType("System.String"));
+            for (int i = 0; i < alluser.Count; i++)
+            {
+                nguoith.Rows.Add(alluser[i].ID, alluser[i].Name);
+            }
+            luedNhanVien.Properties.DataSource = nguoith;
+            luedNhanVien.Properties.ValueMember = "ID";
+            luedNhanVien.Properties.DisplayMember = "Name";
+  
+            luedNhanVien.EditValue = 0;
+        }
         private void LoadMau()
         {
             layoutDanhSachBaoCao.AppearanceGroup.BorderColor = Setting.GroupColor();
@@ -50,7 +94,14 @@ namespace qlcv
         {
             try
             {
-                
+                DateTime TuNgay = dateTuNgay.DateTime;
+                DateTime DenNgay = dateDenNgay.DateTime;
+                int ID_User = 0;
+                ID_User = luedNhanVien.EditValue != null ? int.Parse(luedNhanVien.EditValue.ToString()) : 0;
+                int ID_LoaiGhim = 0;
+                ID_LoaiGhim = luedLoaiGhim.EditValue != null ? int.Parse(luedLoaiGhim.EditValue.ToString()) : 0;
+                List <BaoCaoTongHopGhim> list =Retrofit.instance.BaoCaoTongHopGhim(TuNgay, DenNgay, ID_User, ID_LoaiGhim);
+                gc.DataSource = list;
             }
             catch (Exception ex)
             {

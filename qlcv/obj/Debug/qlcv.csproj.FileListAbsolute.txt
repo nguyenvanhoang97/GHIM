@@ -369,3 +369,5 @@ D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.exe.licenses
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.exe
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.pdb
 D:\Work\Ghim\GHIM\qlcv\bin\Debug\qlcv.exe.config
+D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmBaoCaoChiTietGhim.resources
+D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmDoiMatKhau.resources

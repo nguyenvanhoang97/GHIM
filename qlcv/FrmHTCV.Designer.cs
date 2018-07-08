@@ -58,7 +58,6 @@
             this.luedNguoiTH = new DevExpress.XtraEditors.LookUpEdit();
             this.dateDead = new DevExpress.XtraEditors.DateEdit();
             this.dateNgayBD = new DevExpress.XtraEditors.DateEdit();
-            this.btLuu = new DevExpress.XtraEditors.SimpleButton();
             this.tbHangMuc = new System.Windows.Forms.TextBox();
             this.laCG = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -68,9 +67,10 @@
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgHangMuc = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgHangMuc = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
@@ -89,9 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -107,70 +107,76 @@
             this.layoutControl1.Controls.Add(this.tbHangMuc);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(114, 21, 450, 400);
             this.layoutControl1.Root = this.laCG;
-            this.layoutControl1.Size = new System.Drawing.Size(639, 433);
+            this.layoutControl1.Size = new System.Drawing.Size(852, 533);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(411, 2);
+            this.lookUpEdit1.Location = new System.Drawing.Point(542, 8);
+            this.lookUpEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEdit1.Properties.NullText = "";
-            this.lookUpEdit1.Size = new System.Drawing.Size(211, 20);
+            this.lookUpEdit1.Size = new System.Drawing.Size(292, 22);
             this.lookUpEdit1.StyleController = this.layoutControl1;
             this.lookUpEdit1.TabIndex = 16;
             // 
             // lueTrangThai
             // 
-            this.lueTrangThai.Location = new System.Drawing.Point(100, 182);
+            this.lueTrangThai.Location = new System.Drawing.Point(124, 235);
+            this.lueTrangThai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lueTrangThai.Name = "lueTrangThai";
             this.lueTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueTrangThai.Properties.NullText = "";
-            this.lueTrangThai.Size = new System.Drawing.Size(209, 20);
+            this.lueTrangThai.Size = new System.Drawing.Size(291, 22);
             this.lueTrangThai.StyleController = this.layoutControl1;
             this.lueTrangThai.TabIndex = 15;
             // 
             // tbMoTa
             // 
-            this.tbMoTa.Location = new System.Drawing.Point(100, 242);
+            this.tbMoTa.Location = new System.Drawing.Point(124, 306);
+            this.tbMoTa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMoTa.Multiline = true;
             this.tbMoTa.Name = "tbMoTa";
-            this.tbMoTa.Size = new System.Drawing.Size(522, 106);
+            this.tbMoTa.Size = new System.Drawing.Size(710, 128);
             this.tbMoTa.TabIndex = 14;
             // 
             // lueDuAn
             // 
-            this.lueDuAn.Location = new System.Drawing.Point(100, 67);
-            this.lueDuAn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.lueDuAn.Location = new System.Drawing.Point(124, 83);
+            this.lueDuAn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 4);
             this.lueDuAn.Name = "lueDuAn";
             this.lueDuAn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueDuAn.Properties.NullText = "";
-            this.lueDuAn.Size = new System.Drawing.Size(209, 20);
+            this.lueDuAn.Size = new System.Drawing.Size(291, 22);
             this.lueDuAn.StyleController = this.layoutControl1;
             this.lueDuAn.TabIndex = 13;
             // 
             // luedNguoiTH
             // 
-            this.luedNguoiTH.Location = new System.Drawing.Point(411, 126);
+            this.luedNguoiTH.Location = new System.Drawing.Point(542, 159);
+            this.luedNguoiTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.luedNguoiTH.Name = "luedNguoiTH";
             this.luedNguoiTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.luedNguoiTH.Properties.NullText = "";
-            this.luedNguoiTH.Size = new System.Drawing.Size(211, 20);
+            this.luedNguoiTH.Size = new System.Drawing.Size(292, 22);
             this.luedNguoiTH.StyleController = this.layoutControl1;
             this.luedNguoiTH.TabIndex = 10;
             // 
             // dateDead
             // 
             this.dateDead.EditValue = null;
-            this.dateDead.Location = new System.Drawing.Point(411, 62);
+            this.dateDead.Location = new System.Drawing.Point(542, 83);
+            this.dateDead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateDead.Name = "dateDead";
             this.dateDead.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -181,14 +187,15 @@
             this.dateDead.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.dateDead.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateDead.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
-            this.dateDead.Size = new System.Drawing.Size(211, 20);
+            this.dateDead.Size = new System.Drawing.Size(292, 22);
             this.dateDead.StyleController = this.layoutControl1;
             this.dateDead.TabIndex = 2;
             // 
             // dateNgayBD
             // 
             this.dateNgayBD.EditValue = null;
-            this.dateNgayBD.Location = new System.Drawing.Point(100, 122);
+            this.dateNgayBD.Location = new System.Drawing.Point(124, 159);
+            this.dateNgayBD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateNgayBD.Name = "dateNgayBD";
             this.dateNgayBD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -199,26 +206,16 @@
             this.dateNgayBD.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.dateNgayBD.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateNgayBD.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateNgayBD.Size = new System.Drawing.Size(209, 20);
+            this.dateNgayBD.Size = new System.Drawing.Size(291, 22);
             this.dateNgayBD.StyleController = this.layoutControl1;
             this.dateNgayBD.TabIndex = 6;
             // 
-            // btLuu
-            // 
-            this.btLuu.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_save_24;
-            this.btLuu.Location = new System.Drawing.Point(476, 382);
-            this.btLuu.Name = "btLuu";
-            this.btLuu.Size = new System.Drawing.Size(146, 29);
-            this.btLuu.StyleController = this.layoutControl1;
-            this.btLuu.TabIndex = 8;
-            this.btLuu.Text = "Lưu";
-            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
-            // 
             // tbHangMuc
             // 
-            this.tbHangMuc.Location = new System.Drawing.Point(100, 6);
+            this.tbHangMuc.Location = new System.Drawing.Point(124, 7);
+            this.tbHangMuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbHangMuc.Name = "tbHangMuc";
-            this.tbHangMuc.Size = new System.Drawing.Size(209, 20);
+            this.tbHangMuc.Size = new System.Drawing.Size(291, 25);
             this.tbHangMuc.TabIndex = 0;
             // 
             // laCG
@@ -309,7 +306,7 @@
             this.laCG.OptionsTableLayoutItem.ColumnIndex = 2;
             this.laCG.OptionsTableLayoutItem.ColumnSpan = 2;
             this.laCG.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.laCG.Size = new System.Drawing.Size(639, 433);
+            this.laCG.Size = new System.Drawing.Size(852, 533);
             this.laCG.TextVisible = false;
             // 
             // layoutControlItem3
@@ -319,98 +316,102 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem3.Size = new System.Drawing.Size(296, 30);
+            this.layoutControlItem3.Size = new System.Drawing.Size(403, 37);
             this.layoutControlItem3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 4, 0);
             this.layoutControlItem3.Text = "Hạng mục:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(103, 17);
             // 
             // luePhanHe
             // 
             this.luePhanHe.Control = this.lookUpEdit1;
-            this.luePhanHe.Location = new System.Drawing.Point(326, 0);
+            this.luePhanHe.Location = new System.Drawing.Point(433, 0);
             this.luePhanHe.Name = "luePhanHe";
             this.luePhanHe.OptionsTableLayoutItem.ColumnIndex = 4;
             this.luePhanHe.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.luePhanHe.Size = new System.Drawing.Size(298, 30);
+            this.luePhanHe.Size = new System.Drawing.Size(404, 37);
+            this.luePhanHe.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.luePhanHe.Text = "Phân hệ";
-            this.luePhanHe.TextSize = new System.Drawing.Size(80, 13);
+            this.luePhanHe.TextSize = new System.Drawing.Size(103, 17);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.dateNgayBD;
-            this.layoutControlItem4.Location = new System.Drawing.Point(15, 120);
+            this.layoutControlItem4.Location = new System.Drawing.Point(15, 151);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem4.Size = new System.Drawing.Size(296, 30);
+            this.layoutControlItem4.Size = new System.Drawing.Size(403, 38);
+            this.layoutControlItem4.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.layoutControlItem4.Text = "Ngày bắt đầu:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(103, 17);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.lueDuAn;
-            this.layoutControlItem1.Location = new System.Drawing.Point(15, 60);
+            this.layoutControlItem1.Location = new System.Drawing.Point(15, 75);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(144, 24);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem1.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem1.Size = new System.Drawing.Size(296, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(403, 38);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.layoutControlItem1.Text = "Dự án:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(103, 17);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.lueTrangThai;
-            this.layoutControlItem14.Location = new System.Drawing.Point(15, 180);
+            this.layoutControlItem14.Location = new System.Drawing.Point(15, 227);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem14.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem14.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem14.Size = new System.Drawing.Size(296, 30);
+            this.layoutControlItem14.Size = new System.Drawing.Size(403, 38);
+            this.layoutControlItem14.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.layoutControlItem14.Text = "Trạng thái:";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(103, 17);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.luedNguoiTH;
-            this.layoutControlItem8.Location = new System.Drawing.Point(326, 120);
+            this.layoutControlItem8.Location = new System.Drawing.Point(433, 151);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem8.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem8.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem8.Size = new System.Drawing.Size(298, 30);
-            this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 4, 0);
+            this.layoutControlItem8.Size = new System.Drawing.Size(404, 38);
+            this.layoutControlItem8.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.layoutControlItem8.Text = "Người thực hiện:";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(103, 17);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.dateDead;
-            this.layoutControlItem5.Location = new System.Drawing.Point(326, 60);
+            this.layoutControlItem5.Location = new System.Drawing.Point(433, 75);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 4;
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 2;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem5.Size = new System.Drawing.Size(298, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(404, 38);
+            this.layoutControlItem5.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 5, 0);
             this.layoutControlItem5.Text = "Deadline:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(103, 16);
             // 
-            // layoutControlItem10
+            // layoutControlItem13
             // 
-            this.layoutControlItem10.Control = this.btLuu;
-            this.layoutControlItem10.Location = new System.Drawing.Point(474, 380);
-            this.layoutControlItem10.MinSize = new System.Drawing.Size(80, 26);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 5;
-            this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 13;
-            this.layoutControlItem10.Size = new System.Drawing.Size(150, 33);
-            this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
+            this.layoutControlItem13.Control = this.tbMoTa;
+            this.layoutControlItem13.Location = new System.Drawing.Point(15, 303);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.layoutControlItem13.OptionsTableLayoutItem.ColumnSpan = 5;
+            this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 8;
+            this.layoutControlItem13.OptionsTableLayoutItem.RowSpan = 4;
+            this.layoutControlItem13.Size = new System.Drawing.Size(822, 134);
+            this.layoutControlItem13.Text = "Mô tả:";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(103, 17);
             // 
             // lcgHangMuc
             // 
@@ -422,25 +423,38 @@
             this.lcgHangMuc.Size = new System.Drawing.Size(178, 35);
             this.lcgHangMuc.TextSize = new System.Drawing.Size(93, 13);
             // 
-            // layoutControlItem13
+            // btLuu
             // 
-            this.layoutControlItem13.Control = this.tbMoTa;
-            this.layoutControlItem13.Location = new System.Drawing.Point(15, 240);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem13.OptionsTableLayoutItem.ColumnSpan = 5;
-            this.layoutControlItem13.OptionsTableLayoutItem.RowIndex = 8;
-            this.layoutControlItem13.OptionsTableLayoutItem.RowSpan = 4;
-            this.layoutControlItem13.Size = new System.Drawing.Size(609, 110);
-            this.layoutControlItem13.Text = "Mô tả:";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(80, 13);
+            this.btLuu.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_save_24;
+            this.btLuu.Location = new System.Drawing.Point(638, 478);
+            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btLuu.Name = "btLuu";
+            this.btLuu.Size = new System.Drawing.Size(196, 32);
+            this.btLuu.StyleController = this.layoutControl1;
+            this.btLuu.TabIndex = 8;
+            this.btLuu.Text = "Lưu";
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.btLuu;
+            this.layoutControlItem10.Location = new System.Drawing.Point(635, 475);
+            this.layoutControlItem10.MinSize = new System.Drawing.Size(80, 26);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsTableLayoutItem.ColumnIndex = 5;
+            this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 13;
+            this.layoutControlItem10.Size = new System.Drawing.Size(202, 38);
+            this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // FrmHTCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 433);
+            this.ClientSize = new System.Drawing.Size(852, 533);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmHTCV";
             this.Text = "Quản lý công việc";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -461,9 +475,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -39,8 +39,9 @@ namespace qlcv
             User us = new User();
             us.Name = "Tất cả";
             us.ID = 0;
-            alluser.Insert(0, us);
+            
             alluser = Retrofit.instance.getAllUser();
+            alluser.Insert(0, us);
             nguoith.Columns.Add("ID", Type.GetType("System.Int32"));
             nguoith.Columns.Add("Name", Type.GetType("System.String"));
             for (int i = 0; i < alluser.Count; i++)
@@ -50,8 +51,7 @@ namespace qlcv
             luedNhanVien.Properties.DataSource = nguoith;
             luedNhanVien.Properties.ValueMember = "ID";
             luedNhanVien.Properties.DisplayMember = "Name";
-            luedNhanVien.Properties.PopulateColumns();
-            luedAgent.EditValue = 0;
+            luedNhanVien.EditValue = 0;
         }
         private void LoadMau()
         {
@@ -74,11 +74,16 @@ namespace qlcv
         {
             try
             {
-                
+                DateTime TuNgay = dateTuNgay.DateTime;
+                DateTime DenNgay = dateDenNgay.DateTime;
+                int ID_User = 0;
+                ID_User = luedNhanVien.EditValue != null ? int.Parse(luedNhanVien.EditValue.ToString()) : 0;
+                List<BaoCaoChiTietGhimOBJ> list = Retrofit.instance.BaoCaoChiTietGhim(TuNgay, DenNgay, ID_User);
+                gc.DataSource = list;
             }
             catch (Exception ex)
             {
-               
+                MessageBox.Show("Có lỗi xảy ra vui lòng liên hệ quản trị viên", "Thông báo");
             }
         }
 
