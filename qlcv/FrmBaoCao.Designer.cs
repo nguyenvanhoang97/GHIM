@@ -136,6 +136,7 @@
             this.gridColumn9,
             this.gridColumn10});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.IndicatorWidth = 35;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -386,6 +387,7 @@
             // 
             // layoutControlGroup2
             // 
+            this.layoutControlGroup2.AllowBorderColorBlending = true;
             this.layoutControlGroup2.AppearanceGroup.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlGroup2.AppearanceGroup.ForeColor = System.Drawing.Color.White;
             this.layoutControlGroup2.AppearanceGroup.Options.UseFont = true;

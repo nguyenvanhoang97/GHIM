@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using System.Configuration;
+using qlcv.Reponses;
+using qlcv.Network;
+using log4net;
 
 namespace qlcv
 {
     public partial class frmDoiMatKhau : DevExpress.XtraEditors.XtraForm
     {
+        private ILog lg = LogManager.GetLogger(typeof(frmDoiMatKhau));
         string taikhoan = "";
-      
+
         public frmDoiMatKhau()
         {
             InitializeComponent();
@@ -28,71 +32,114 @@ namespace qlcv
         }
         private void btDoiMatKhau_Click(object sender, EventArgs e)
         {
-            string matKhauCu, matKhauMoi, nhapLaiMatKhauMoi;
-            matKhauMoi = txtMatKhauMoi.Text;
-            nhapLaiMatKhauMoi = txtNhapLaiMatKhau.Text;
-            matKhauCu = txtMatKhauCu.Text;
-            if(matKhauMoi!=nhapLaiMatKhauMoi)
+            try
             {
-                lbLoi.Text = "Mật khẩu nhập lại không khớp vui lòng kiểm tra lại!";
-            }
-            else if(txtMatKhauMoi.Text.Length<8)
-            {
-                lbLoi.Text = "Mật khẩu phải có từ 8 kí tự trở lên!";
-            }
-            else
-            {
-                try
+                string matKhauCu, matKhauMoi, nhapLaiMatKhauMoi;
+                matKhauMoi = txtMatKhauMoi.Text;
+                nhapLaiMatKhauMoi = txtNhapLaiMatKhau.Text;
+                matKhauCu = txtMatKhauCu.Text;
+                if (matKhauMoi != nhapLaiMatKhauMoi)
                 {
-                    //Lưu mật khẩu mới nếu khớp
+                    lbLoi.Text = "Mật khẩu nhập lại không khớp vui lòng kiểm tra lại!";
                 }
-                catch (Exception ex)
+                else if (txtMatKhauMoi.Text.Length < 8)
+                {
+                    lbLoi.Text = "Mật khẩu phải có từ 8 kí tự trở lên!";
+                }
+                else
                 {
 
-                    throw ex;
+                    //Lưu mật khẩu mới nếu khớp
+                    StatusRespon status = Retrofit.instance.UserDoiMatKhau(matKhauCu, matKhauMoi);
+                    MessageBox.Show(status.Message);
+                    if (status.Status)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        btNhapLai_Click(sender, e);
+                    }
+                    
                 }
-                
             }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+
         }
         private void txtMatKhauMoi_TextChanged(object sender, EventArgs e)
         {
-            string  matKhau, matKhauNhapLai;
-            matKhau = txtMatKhauMoi.Text;
-            matKhauNhapLai = txtNhapLaiMatKhau.Text;
-            if (matKhau.Length < 8)
+            try
             {
-                lbMatKhau.Text = "Mật khẩu ngắn thường dễ đoán. \r\nHãy thử mật khẩu có ít nhất 8 ký tự.";
+                if (txtMatKhauMoi.Text.Trim() != "")
+                {
+                    string matKhau, matKhauNhapLai;
+                    matKhau = txtMatKhauMoi.Text;
+                    matKhauNhapLai = txtNhapLaiMatKhau.Text;
+                    if (matKhau.Length < 8)
+                    {
+                        lbMatKhau.Text = "Mật khẩu ngắn thường dễ đoán. \r\nHãy thử mật khẩu có ít nhất 8 ký tự.";
+                    }
+                    else if (matKhau.Length >= 8)
+                    {
+                        lbMatKhau.Text = "";
+                    }
+                }
+
             }
-            else if (matKhau.Length >= 8)
+            catch (Exception ex)
             {
-                lbMatKhau.Text = "";
+                lg.Error(ex);
             }
+            
         }
         private void txtNhapLaiMatKhau_TextChanged(object sender, EventArgs e)
         {
-            string matKhau, matKhauNhapLai;
-            matKhau = txtMatKhauMoi.Text;
-            matKhauNhapLai = txtNhapLaiMatKhau.Text;
-            if (matKhau != matKhauNhapLai)
+            try
             {
-                lbNhapLaiMK.Text = "Mật khẩu không khớp vui lòng kiểm tra lại!";
+                if (txtNhapLaiMatKhau.Text.Trim() != "")
+                {
+                    string matKhau, matKhauNhapLai;
+                    matKhau = txtMatKhauMoi.Text;
+                    matKhauNhapLai = txtNhapLaiMatKhau.Text;
+                    if (matKhau != matKhauNhapLai)
+                    {
+                        lbNhapLaiMK.Text = "Mật khẩu không khớp vui lòng kiểm tra lại!";
+                    }
+                    else if (matKhau.Equals(matKhauNhapLai))
+                    {
+                        lbNhapLaiMK.Text = "";
+                    }
+                }
             }
-            else if (matKhau.Equals(matKhauNhapLai))
+            catch (Exception ex)
             {
-                lbNhapLaiMK.Text = "";
+                lg.Error(ex);
             }
+           
+
         }
-        
-            
+
+
         private void btNhapLai_Click(object sender, EventArgs e)
         {
             Reset();
         }
         private void Reset()
         {
-            txtMatKhauCu.ResetText();
-            txtMatKhauMoi.ResetText();
-            txtNhapLaiMatKhau.ResetText();
+            try
+            {
+                txtMatKhauCu.ResetText();
+                txtMatKhauMoi.ResetText();
+                txtNhapLaiMatKhau.ResetText();
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+            
         }
 
     }

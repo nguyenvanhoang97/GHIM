@@ -1,4 +1,5 @@
-﻿using qlcv.Network;
+﻿using log4net;
+using qlcv.Network;
 using qlcv.Reponses;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,16 @@ namespace qlcv
 {
     public partial class FrmDuAn : Form
     {
-        
+        private ILog lg = LogManager.GetLogger(typeof(FrmDuAn));
         public FrmDuAn()
         {
             InitializeComponent();
+            LoadMau();
+        }
+        private void LoadMau()
+        {
+            layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
+
         }
         private void Load_duAn()
         {
@@ -66,6 +73,16 @@ namespace qlcv
                 e.Appearance.BackColor = Color.LightYellow;
         }
 
-      
+        private void gridView1_CustomDrawRowIndicator_1(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+        }
+
+        private void gridView1_RowCellStyle_1(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
+                e.Appearance.BackColor = Color.LightYellow;
+        }
     }
 }

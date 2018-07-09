@@ -11,11 +11,13 @@ using qlcv.Network;
 using qlcv.Reponses;
 using DevExpress.Utils;
 using DevExpress.XtraCharts;
+using log4net;
 
 namespace qlcv
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private ILog lg = LogManager.GetLogger(typeof(FrmQLCV));
         bool IsAdmin;
         public frmMain(bool IsAdmin)
         {
@@ -27,19 +29,35 @@ namespace qlcv
         }
         private void LoadNgayGioHeThong()
         {
-            DateTime now = DateTime.Now;
-            txtNgayGioHeThong.Caption = now.ToString("HH:mm:ss   dd-MM-yyyy");
+            try
+            {
+                DateTime now = DateTime.Now;
+                txtNgayGioHeThong.Caption = now.ToString("HH:mm:ss   dd-MM-yyyy");
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
         private void LoadPhanQuyen()
         {
-            txtTaiKhoan.Caption = "Chúc "+Cache.username+" có một ngày tốt lành!";
-            if (!IsAdmin)
+            try
             {
-                btCongViec.Enabled = false;
-                btDuAn.Enabled = false;
-                btNhanVien.Enabled = false;
-                
+                txtTaiKhoan.Caption = "Chúc " + Cache.username + " có một ngày tốt lành!";
+                if (!IsAdmin)
+                {
+                    btCongViec.Enabled = false;
+                    btDuAn.Enabled = false;
+                    btNhanVien.Enabled = false;
+
+                }
             }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
         private void LoadMau()
         {
@@ -51,9 +69,18 @@ namespace qlcv
             deTuNgay.DateTime = DateTime.Today;
             deDenNgay.DateTime = DateTime.Today.AddDays(1).AddTicks(-1);
         }
+        List<Ghim> listGhim = new List<Ghim>();
         private void LoadBieuDo()
         {
-            List<Ghim> listGhim = Retrofit.instance.Ghim(deTuNgay.DateTime, deDenNgay.DateTime);
+            try
+            {
+                listGhim = Retrofit.instance.Ghim(deTuNgay.DateTime, deDenNgay.DateTime);
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+            
             WaitDialogForm wait = new DevExpress.Utils.WaitDialogForm("Phần mềm đang tải dữ liệu....", "Vui lòng chờ");
             try
             {
@@ -99,7 +126,8 @@ namespace qlcv
             }
             catch (Exception ex)
             {
-                throw ex;
+                lg.Error(ex);
+                wait.Close();
             }
             finally
             {
@@ -133,7 +161,7 @@ namespace qlcv
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmBaoCao frmBC = new FrmBaoCao();
-            frmBC.ShowDialog();
+            frmBC.Show();
         }
 
         private void btBaoCaoTongHopGhim_ItemClick(object sender, ItemClickEventArgs e)

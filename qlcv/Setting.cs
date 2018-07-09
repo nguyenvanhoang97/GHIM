@@ -19,14 +19,14 @@ namespace qlcv
             //return Color.RoyalBlue;
             //return Color.DarkSeaGreen;
             //return ColorTranslator.FromHtml("#14C30D");
-            Color mau = Color.FromArgb(51, 153, 255);
+            Color mau = Color.FromArgb(117, 199, 241);
             return mau;
             //return ColorTranslator.FromHtml("#79AE92");
         }
         public static Color RowColor()
         {
             //return Color.LightCyan;
-            return Color.LightYellow;
+            return ColorTranslator.FromHtml("#e98df5");
             //return Color.#CEF6CE;
         }
         public static void XuatExcelv2Ten(string _fileName, DevExpress.XtraGrid.Views.Grid.GridView gridView1, GridControl gc)

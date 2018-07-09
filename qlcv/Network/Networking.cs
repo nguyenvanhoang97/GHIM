@@ -41,7 +41,7 @@ namespace qlcv.Network
                     //values["thing2"] = "world";
                     var response = client.UploadValues(url, values);
                     Cursor.Current = Cursors.WaitCursor;
-                    string s = Encoding.Default.GetString(response);
+                    string s = Encoding.UTF8.GetString(response);
                     Cursor.Current = Cursors.Arrow;
                     return s;
                 }

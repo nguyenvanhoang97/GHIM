@@ -1,4 +1,5 @@
-﻿using qlcv.Network;
+﻿using log4net;
+using qlcv.Network;
 using qlcv.objClass;
 using qlcv.Reponses;
 using System;
@@ -14,6 +15,7 @@ namespace qlcv
 {
     public partial class frmNhanVien : Form
     {
+        private ILog lg = LogManager.GetLogger(typeof(frmNhanVien));
         public frmNhanVien()
         {
             InitializeComponent();
@@ -24,66 +26,96 @@ namespace qlcv
         {
             LoadGioiTinh();
             LoadNhanVien();
+            LoadMau();
+        }
+        private void LoadMau()
+        {
+            layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
+
         }
         private void LoadNhanVien()
         {
-            List<User> alluser = Retrofit.instance.getAllUser();
-            for (int i = 0; i < alluser.Count; i++)
+            try
             {
-                if (alluser[i].SoDienThoai == null)
+                List<User> alluser = Retrofit.instance.getAllUser();
+                for (int i = 0; i < alluser.Count; i++)
                 {
-                    alluser[i].SoDienThoai = "";
+                    if (alluser[i].SoDienThoai == null)
+                    {
+                        alluser[i].SoDienThoai = "";
+                    }
+                    if (alluser[i].DiaChi == null)
+                    {
+                        alluser[i].DiaChi = "";
+                    }
+                    if (!alluser[i].GioiTinh)
+                    {
+                        alluser[i].gt = "Nam";
+                    }
+                    else
+                    {
+                        alluser[i].gt = "Nữ";
+                    }
                 }
-                if (alluser[i].DiaChi == null)
-                {
-                    alluser[i].DiaChi = "";
-                }
-                if (!alluser[i].GioiTinh)
-                {
-                    alluser[i].gt = "Nam";
-                }
-                else
-                {
-                    alluser[i].gt = "Nữ";
-                }
-            }
 
-            gridControl1.DataSource = alluser;
+                gridControl1.DataSource = alluser;
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
         private void LoadGioiTinh()
         {
-            List<GioiTinh> listGioiTinh = new List<GioiTinh>();
-            listGioiTinh.Add(new GioiTinh(0, "Nam"));
-            listGioiTinh.Add(new GioiTinh(1, "Nữ"));
-            lueGender.Properties.DataSource = listGioiTinh;
-            lueGender.Properties.ValueMember = "ID";
-            lueGender.Properties.DisplayMember = "gt";
-            lueGender.EditValue = "1";
+            try
+            {
+                List<GioiTinh> listGioiTinh = new List<GioiTinh>();
+                listGioiTinh.Add(new GioiTinh(0, "Nam"));
+                listGioiTinh.Add(new GioiTinh(1, "Nữ"));
+                lueGender.Properties.DataSource = listGioiTinh;
+                lueGender.Properties.ValueMember = "ID";
+                lueGender.Properties.DisplayMember = "gt";
+                lueGender.EditValue = "1";
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+            
         }
         private void simpleButton2_Click(object sender, EventArgs e)//Button lưu thông tin nhân viên
         {
-            if(checkThem)
+            try
             {
-                //Thêm người dùng mới
-                User user = new User(tbName.Text, tbAddress.Text, tbMail.Text, tbUsername.Text, tbPass.Text,
-                cbIsAd.Checked, tbPhone.Text, deNgaySinh.DateTime, lueGender.EditValue.ToString() == "0" ? false : true);
-                user.ThemDuAn = cbThemDA.Checked;
-                StatusRespon status = Retrofit.instance.addUser(user);
-                MessageBox.Show(status.Message);
-                LoadNhanVien();
-                An();
+                if (checkThem)
+                {
+                    //Thêm người dùng mới
+                    User user = new User(tbName.Text, tbAddress.Text, tbMail.Text, tbUsername.Text, tbPass.Text,
+                    cbIsAd.Checked, tbPhone.Text, deNgaySinh.DateTime, lueGender.EditValue.ToString() == "0" ? false : true);
+                    user.ThemDuAn = cbThemDA.Checked;
+                    StatusRespon status = Retrofit.instance.addUser(user);
+                    MessageBox.Show(status.Message);
+                    LoadNhanVien();
+                    An();
+                }
+                else
+                {
+                    //Sửa người dùng
+                    User user = new User(tbName.Text, tbAddress.Text, tbMail.Text, tbUsername.Text, tbPass.Text,
+                    cbIsAd.Checked, tbPhone.Text, deNgaySinh.DateTime, lueGender.EditValue.ToString() == "0" ? false : true);
+                    user.ThemDuAn = cbThemDA.Checked;
+                    user.ID = Int32.Parse(id);
+                    StatusRespon status = Retrofit.instance.updateUser(user);
+                    LoadNhanVien();
+                    An();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //Sửa người dùng
-                User user = new User(tbName.Text, tbAddress.Text, tbMail.Text, tbUsername.Text, tbPass.Text,
-                cbIsAd.Checked, tbPhone.Text, deNgaySinh.DateTime, lueGender.EditValue.ToString() == "0" ? false : true);
-                user.ThemDuAn = cbThemDA.Checked;
-                user.ID = Int32.Parse(id);
-                StatusRespon status = Retrofit.instance.updateUser(user);
-                LoadNhanVien();
-                An();
+                lg.Error(ex);
             }
+            
             
         }
 
@@ -125,33 +157,40 @@ namespace qlcv
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                lg.Error(ex);
             }
             
         }
 
         private void btXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-            string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Name").ToString();
-            DialogResult result = MessageBox.Show("Xóa  "+name+"?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                User user = new User();
-                user.ID = Int32.Parse(id);
-                StatusRespon status = Retrofit.instance.deleteUser(user);
-                if (status.Status)
+                id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+                string name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Name").ToString();
+                DialogResult result = MessageBox.Show("Xóa  " + name + "?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
+                    User user = new User();
+                    user.ID = Int32.Parse(id);
+                    StatusRespon status = Retrofit.instance.deleteUser(user);
+                    if (status.Status)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không xóa được User này");
+                    }
+                    LoadNhanVien();
                 }
-                else
-                {
-                    MessageBox.Show("Không xóa được User này");
-                }
-                LoadNhanVien();
+
             }
-            
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
 
         private void Hien()

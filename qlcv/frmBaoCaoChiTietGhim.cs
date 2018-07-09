@@ -13,12 +13,13 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using qlcv.Reponses;
 using qlcv.Network;
+using log4net;
 
 namespace qlcv
 {
     public partial class frmBaoCaoChiTietGhim : Form
     {
-
+        private ILog lg = LogManager.GetLogger(typeof(frmBaoCaoChiTietGhim));
         public frmBaoCaoChiTietGhim()
         {
             InitializeComponent();
@@ -83,6 +84,7 @@ namespace qlcv
             }
             catch (Exception ex)
             {
+                lg.Error(ex);
                 MessageBox.Show("Có lỗi xảy ra vui lòng liên hệ quản trị viên", "Thông báo");
             }
         }
@@ -107,7 +109,7 @@ namespace qlcv
             }
             catch (Exception ex)
             {
-                
+                lg.Error(ex);
             }
         }
         

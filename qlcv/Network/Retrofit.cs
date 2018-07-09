@@ -153,5 +153,14 @@ namespace qlcv.Network
             string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baoCaoTHGhim", pa);
             return JsonConvert.DeserializeObject<List<BaoCaoTongHopGhim>>(json);
         }
+        public StatusRespon UserDoiMatKhau(string oldpass, string newpass)
+        {
+            var value = new NameValueCollection();
+            value["ID"] = userLogin.ID+"";
+            value["PassNew"] = newpass;
+            value["PassOld"] = oldpass;
+            string json = Networking.getInstance().Post(BASE_URL + "api/user/updatepass", value);
+            return JsonConvert.DeserializeObject<StatusRespon>(json);
+        }
     }
 }

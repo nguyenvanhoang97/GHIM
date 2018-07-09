@@ -1,4 +1,5 @@
-﻿using qlcv.Network;
+﻿using log4net;
+using qlcv.Network;
 using qlcv.Reponses;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace qlcv
 {
     public partial class FrmQLCV : Form
     {
+        private ILog lg = LogManager.GetLogger(typeof(FrmQLCV));
         public FrmQLCV()
         {
             InitializeComponent();
@@ -22,9 +24,16 @@ namespace qlcv
         string id;
         private void LoadCongViec()
         {
-
-            List<WorkV2> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
-            gridControl1.DataSource = allwork;
+            try
+            {
+                List<WorkV2> allwork = Retrofit.instance.getAllWork(luedDuAn.EditValue.ToString());
+                gridControl1.DataSource = allwork;
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
         private void LoadMau()
         {
@@ -38,10 +47,18 @@ namespace qlcv
         }
         private void DuAn()
         {
-            List<DuAn> allDuAn = Retrofit.instance.getAllDuAn();
-            luedDuAn.Properties.DataSource = allDuAn;
-            luedDuAn.Properties.ValueMember = "ID";
-            luedDuAn.Properties.DisplayMember = "TenDuAn";
+            try
+            {
+                List<DuAn> allDuAn = Retrofit.instance.getAllDuAn();
+                luedDuAn.Properties.DataSource = allDuAn;
+                luedDuAn.Properties.ValueMember = "ID";
+                luedDuAn.Properties.DisplayMember = "TenDuAn";
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+            
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
@@ -60,8 +77,7 @@ namespace qlcv
             }
             catch (Exception ex)
            {
-
-                throw ex;
+                lg.Error(ex);
             }
         }
 
@@ -72,8 +88,16 @@ namespace qlcv
         }
         private void LoadWork(string id)
         {
-            List<WorkV2> works = Retrofit.instance.getAllWork(id);
-            gridControl1.DataSource = works;
+            try
+            {
+                List<WorkV2> works = Retrofit.instance.getAllWork(id);
+                gridControl1.DataSource = works;
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
 
         private void luedDuAn_EditValueChanged(object sender, EventArgs e)
@@ -89,24 +113,32 @@ namespace qlcv
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-            string hangmuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
-            DialogResult result = MessageBox.Show("Xóa "+hangmuc+"?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                Work work = new Work();
-                work.ID = Int32.Parse(id);
-                StatusRespon status = Retrofit.instance.deleteWork(work);
-                if (status.Status)
+                string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+                string hangmuc = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
+                DialogResult result = MessageBox.Show("Xóa " + hangmuc + "?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
+                    Work work = new Work();
+                    work.ID = Int32.Parse(id);
+                    StatusRespon status = Retrofit.instance.deleteWork(work);
+                    if (status.Status)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không xóa được công việc này");
+                    }
+                    LoadCongViec();
                 }
-                else
-                {
-                    MessageBox.Show("Không xóa được công việc này");
-                }
-                LoadCongViec();
             }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
 
         private void btSua_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -116,11 +148,19 @@ namespace qlcv
 
         private void btBaoLoi_Click(object sender, EventArgs e)
         {
-            string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
-            string hm = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
-            FrmBaoLoi frmBL = new FrmBaoLoi(id);
-            frmBL.Text = "Báo lỗi hạng mục " + hm;
-            frmBL.ShowDialog();
+            try
+            {
+                string id = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID").ToString();
+                string hm = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "HangMuc").ToString();
+                FrmBaoLoi frmBL = new FrmBaoLoi(id);
+                frmBL.Text = "Báo lỗi hạng mục " + hm;
+                frmBL.Show();
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
     }
 }

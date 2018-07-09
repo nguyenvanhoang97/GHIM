@@ -13,12 +13,13 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using qlcv.Reponses;
 using qlcv.Network;
+using log4net;
 
 namespace qlcv
 {
     public partial class frmBaoCaoTongHopGhim : Form
     {
-
+        private ILog lg = LogManager.GetLogger(typeof(frmBaoCaoTongHopGhim));
         public frmBaoCaoTongHopGhim()
         {
             InitializeComponent();
@@ -105,7 +106,7 @@ namespace qlcv
             }
             catch (Exception ex)
             {
-               
+                lg.Error(ex);
             }
         }
 
@@ -129,7 +130,7 @@ namespace qlcv
             }
             catch (Exception ex)
             {
-                
+                lg.Error(ex);
             }
         }
         

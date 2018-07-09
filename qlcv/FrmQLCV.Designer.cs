@@ -460,6 +460,7 @@
             // 
             // layoutControlGroup1
             // 
+            this.layoutControlGroup1.AllowBorderColorBlending = true;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem9,

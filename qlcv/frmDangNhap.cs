@@ -1,4 +1,5 @@
-﻿using qlcv.Network;
+﻿using log4net;
+using qlcv.Network;
 using qlcv.Reponses;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace qlcv
 {
     public partial class frmDangNhap : Form
     {
+        private ILog lg = LogManager.GetLogger(typeof(frmDangNhap));
         public frmDangNhap()
         {
             InitializeComponent();
@@ -20,38 +22,46 @@ namespace qlcv
         }
         private void buttonDN_Click(object sender, EventArgs e)
         {
-            string username = textBoxTK.Text;
-            string password = textBoxMK.Text;
-            User login = Retrofit.instance.Login(username, password);
-            Console.Write(login);
-            if(login != null)
+            try
             {
-                if (login.status)
+                string username = textBoxTK.Text;
+                string password = textBoxMK.Text;
+                User login = Retrofit.instance.Login(username, password);
+                Console.Write(login);
+                if (login != null)
                 {
-                    Networking.getInstance().setToken(login.Token);
-                    frmMain frMenu = new frmMain(login.IsAdmin);
-                    frMenu.Show();
-                    this.Hide();
-                    Cache.username = username;
-                    if (cbGhiNho.Checked)
+                    if (login.status)
                     {
-                        Properties.Settings.Default.user = username;
-                        Properties.Settings.Default.password = password;
-                        Properties.Settings.Default.Save();
+                        Cache.username = username;
+                        Networking.getInstance().setToken(login.Token);
+                        frmMain frMenu = new frmMain(login.IsAdmin);
+                        frMenu.Show();
+                        this.Hide();
+                        if (cbGhiNho.Checked)
+                        {
+                            Properties.Settings.Default.user = username;
+                            Properties.Settings.Default.password = password;
+                            Properties.Settings.Default.Save();
+                        }
+                        else
+                        {
+                            Properties.Settings.Default.user = "";
+                            Properties.Settings.Default.password = "";
+                            Properties.Settings.Default.Save();
+                        }
                     }
                     else
                     {
-                        Properties.Settings.Default.user = "";
-                        Properties.Settings.Default.password = "";
-                        Properties.Settings.Default.Save();
+                        MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo");
-                }
+
             }
-            
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -61,9 +71,17 @@ namespace qlcv
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            textBoxTK.Text = Properties.Settings.Default.user;
-            textBoxMK.Text = Properties.Settings.Default.password;
-            cbGhiNho.Checked = textBoxTK.Text != "" && textBoxMK.Text != "";
+            try
+            {
+                textBoxTK.Text = Properties.Settings.Default.user;
+                textBoxMK.Text = Properties.Settings.Default.password;
+                cbGhiNho.Checked = textBoxTK.Text != "" && textBoxMK.Text != "";
+            }
+            catch (Exception ex)
+            {
+                lg.Error(ex);
+            }
+           
         }
     }
 }

@@ -371,3 +371,5 @@ D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.pdb
 D:\Work\Ghim\GHIM\qlcv\bin\Debug\qlcv.exe.config
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmBaoCaoChiTietGhim.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmDoiMatKhau.resources
+D:\Work\Ghim\GHIM\qlcv\bin\Debug\log4net.dll
+D:\Work\Ghim\GHIM\qlcv\bin\Debug\log4net.xml
