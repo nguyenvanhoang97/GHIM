@@ -14,6 +14,7 @@ using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using qlcv.Reponses;
 using qlcv.Network;
 using log4net;
+using DevExpress.Utils;
 
 namespace qlcv
 {
@@ -93,8 +94,10 @@ namespace qlcv
 
         private void LoadBaoCao()
         {
+            WaitDialogForm wait = new DevExpress.Utils.WaitDialogForm("Phần mềm đang tải dữ liệu....", "Vui lòng chờ");
             try
             {
+                wait.Show();
                 DateTime TuNgay = dateTuNgay.DateTime;
                 DateTime DenNgay = dateDenNgay.DateTime;
                 int ID_User = 0;
@@ -107,6 +110,11 @@ namespace qlcv
             catch (Exception ex)
             {
                 lg.Error(ex);
+                wait.Close();
+            }
+            finally
+            {
+                wait.Close();
             }
         }
 

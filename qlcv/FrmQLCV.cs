@@ -84,8 +84,17 @@ namespace qlcv
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            FrmHTCV frm = new FrmHTCV();
-            frm.Show();
+            if (luedDuAn.EditValue != null)
+            {
+                FrmHTCV frm = new FrmHTCV(Int32.Parse(luedDuAn.EditValue.ToString()));
+                frm.Show();
+            }
+            else
+            {
+                FrmHTCV frm = new FrmHTCV(-1);
+                frm.Show();
+            }
+           
         }
         private void LoadWork(string id)
         {
@@ -116,6 +125,7 @@ namespace qlcv
                 string id = luedDuAn.EditValue.ToString();
                 LoadWork(id);
             }
+            
             
             
         }
@@ -188,6 +198,11 @@ namespace qlcv
         {
             if (e.RowHandle != gridView1.FocusedRowHandle && (e.RowHandle % 2 == 0))
                 e.Appearance.BackColor = Setting.RowColor();
+        }
+
+        private void btXem_Click(object sender, EventArgs e)
+        {
+            luedDuAn_EditValueChanged(sender, e);
         }
     }
 }

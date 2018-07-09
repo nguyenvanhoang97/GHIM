@@ -16,6 +16,7 @@ namespace qlcv
     {
         private ILog lg = LogManager.GetLogger(typeof(FrmHTCV));
         private string ID;
+        int IDDuAn=-1;
         public FrmHTCV(string id)
         {
             InitializeComponent();
@@ -27,14 +28,16 @@ namespace qlcv
             LoadDataSetGiaTri();
         }
         
-        public FrmHTCV()
+        public FrmHTCV(int IDDuAn)
         {
             InitializeComponent();
+            this.IDDuAn = IDDuAn;
             LoadNguoiThucHien();
             LoadTrangThai();
             LoadPhanHe();
             DuAn();
             this.Text = "Thêm công việc";
+            
         }
         private void LoadDataSetGiaTri()
         {
@@ -63,7 +66,7 @@ namespace qlcv
             lookUpEdit1.ResetText();
             luedNguoiTH.ResetText();
             lueDuAn.ResetText();
-            lueTrangThai.ResetText();
+            
             dateDead.ResetText();
             dateNgayBD.ResetText();
         }
@@ -79,6 +82,10 @@ namespace qlcv
                 lueDuAn.Properties.DataSource = allDuAn;
                 lueDuAn.Properties.ValueMember = "ID";
                 lueDuAn.Properties.DisplayMember = "TenDuAn";
+                if (IDDuAn != -1)
+                {
+                    lueDuAn.EditValue = IDDuAn;
+                }
             }
             catch (Exception ex)
             {
@@ -108,7 +115,7 @@ namespace qlcv
                 luedNguoiTH.Properties.DataSource = nguoith;
                 luedNguoiTH.Properties.ValueMember = "ID";
                 luedNguoiTH.Properties.DisplayMember = "Name";
-                luedNguoiTH.Properties.PopulateColumns();
+                //luedNguoiTH.Properties.PopulateColumns();
             }
             catch (Exception ex)
             {
@@ -124,6 +131,7 @@ namespace qlcv
                 lueTrangThai.Properties.DataSource = allTrangThai;
                 lueTrangThai.Properties.ValueMember = "ID";
                 lueTrangThai.Properties.DisplayMember = "TenTrangThai";
+                lueTrangThai.EditValue = 1;
             }
             catch (Exception ex)
             {

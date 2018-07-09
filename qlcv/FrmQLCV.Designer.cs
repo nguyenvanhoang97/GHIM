@@ -75,7 +75,7 @@
             this.btXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btBaoLoi = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btGui = new DevExpress.XtraEditors.SimpleButton();
+            this.btXem = new DevExpress.XtraEditors.SimpleButton();
             this.btThem = new DevExpress.XtraEditors.SimpleButton();
             this.luedDuAn = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -106,7 +106,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.btGui);
+            this.layoutControl1.Controls.Add(this.btXem);
             this.layoutControl1.Controls.Add(this.btThem);
             this.layoutControl1.Controls.Add(this.luedDuAn);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -343,16 +343,17 @@
             this.btBaoLoi.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btBaoLoi.Click += new System.EventHandler(this.btBaoLoi_Click);
             // 
-            // btGui
+            // btXem
             // 
-            this.btGui.ImageOptions.Image = global::qlcv.Properties.Resources.icons8_new_post_24;
-            this.btGui.Location = new System.Drawing.Point(307, 30);
-            this.btGui.Margin = new System.Windows.Forms.Padding(4);
-            this.btGui.Name = "btGui";
-            this.btGui.Size = new System.Drawing.Size(74, 23);
-            this.btGui.StyleController = this.layoutControl1;
-            this.btGui.TabIndex = 11;
-            this.btGui.Text = "Gửi";
+            this.btXem.ImageOptions.Image = global::qlcv.Properties.Resources.if_filter_173013__2_;
+            this.btXem.Location = new System.Drawing.Point(307, 30);
+            this.btXem.Margin = new System.Windows.Forms.Padding(4);
+            this.btXem.Name = "btXem";
+            this.btXem.Size = new System.Drawing.Size(74, 23);
+            this.btXem.StyleController = this.layoutControl1;
+            this.btXem.TabIndex = 11;
+            this.btXem.Text = "Xem";
+            this.btXem.Click += new System.EventHandler(this.btXem_Click);
             // 
             // btThem
             // 
@@ -529,7 +530,7 @@
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.Control = this.btGui;
+            this.layoutControlItem11.Control = this.btXem;
             this.layoutControlItem11.Location = new System.Drawing.Point(300, 0);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(80, 26);
             this.layoutControlItem11.Name = "layoutControlItem11";
@@ -573,7 +574,7 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup laCG;
-        private DevExpress.XtraEditors.SimpleButton btGui;
+        private DevExpress.XtraEditors.SimpleButton btXem;
         private DevExpress.XtraEditors.SimpleButton btThem;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
