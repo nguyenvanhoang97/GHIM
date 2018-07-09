@@ -198,6 +198,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deNgaySinh.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.deNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.deNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.deNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.deNgaySinh.Size = new System.Drawing.Size(173, 22);
             this.deNgaySinh.StyleController = this.layoutControl1;
             this.deNgaySinh.TabIndex = 16;

@@ -9,8 +9,8 @@ namespace qlcv.Network
 {
     class Retrofit
     {
-        //private string BASE_URL = "https://dmhoang.herokuapp.com/";
-        private string BASE_URL = "http://10.100.1.38:6788/";
+        private string BASE_URL = "https://dmhoang.herokuapp.com/";
+        //private string BASE_URL = "http://10.100.1.38:6788/";
         private User userLogin;
 
         public static Retrofit instance = new Retrofit();
