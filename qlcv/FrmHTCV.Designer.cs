@@ -66,11 +66,11 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lcgHangMuc = new DevExpress.XtraLayout.LayoutControlItem();
             this.luePhanHe = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lcgHangMuc = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
@@ -87,11 +87,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePhanHe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -391,16 +391,6 @@
             this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(103, 17);
             // 
-            // lcgHangMuc
-            // 
-            this.lcgHangMuc.Control = this.tbHangMuc;
-            this.lcgHangMuc.Location = new System.Drawing.Point(44, 0);
-            this.lcgHangMuc.Name = "lcgHangMuc";
-            this.lcgHangMuc.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.lcgHangMuc.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.lcgHangMuc.Size = new System.Drawing.Size(178, 35);
-            this.lcgHangMuc.TextSize = new System.Drawing.Size(93, 13);
-            // 
             // luePhanHe
             // 
             this.luePhanHe.Control = this.lookUpEdit1;
@@ -454,6 +444,16 @@
             this.layoutControlItem1.Text = "Dự án:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(103, 17);
             // 
+            // lcgHangMuc
+            // 
+            this.lcgHangMuc.Control = this.tbHangMuc;
+            this.lcgHangMuc.Location = new System.Drawing.Point(44, 0);
+            this.lcgHangMuc.Name = "lcgHangMuc";
+            this.lcgHangMuc.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.lcgHangMuc.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.lcgHangMuc.Size = new System.Drawing.Size(178, 35);
+            this.lcgHangMuc.TextSize = new System.Drawing.Size(93, 13);
+            // 
             // FrmHTCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -462,6 +462,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHTCV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý công việc";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -479,11 +480,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePhanHe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lcgHangMuc)).EndInit();
             this.ResumeLayout(false);
 
         }

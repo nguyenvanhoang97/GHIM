@@ -26,7 +26,7 @@ namespace qlcv
         public static Color RowColor()
         {
             //return Color.LightCyan;
-            return ColorTranslator.FromHtml("#e98df5");
+            return ColorTranslator.FromHtml("#E0F8E0");
             //return Color.#CEF6CE;
         }
         public static void XuatExcelv2Ten(string _fileName, DevExpress.XtraGrid.Views.Grid.GridView gridView1, GridControl gc)

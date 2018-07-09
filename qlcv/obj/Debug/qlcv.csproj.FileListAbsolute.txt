@@ -356,7 +356,6 @@ D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FormDangNhap.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FrmBaoCao.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmBaoCaoTongHopGhim.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FrmBaoLoi.resources
-D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FrmBC.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.frmDangNhap.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FrmDuAn.resources
 D:\Work\Ghim\GHIM\qlcv\obj\Debug\qlcv.FrmHTCV.resources

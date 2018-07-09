@@ -39,27 +39,27 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btBaoLoi = new DevExpress.XtraEditors.SimpleButton();
             this.dateDeadline = new DevExpress.XtraEditors.DateEdit();
             this.tbLoi = new System.Windows.Forms.TextBox();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDeadline.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDeadline.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -70,17 +70,34 @@
             this.layoutControl1.Controls.Add(this.tbLoi);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(727, 320);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(95, 10);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(49, 22);
+            this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // btBaoLoi
             // 
             this.btBaoLoi.Location = new System.Drawing.Point(623, 286);
-            this.btBaoLoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBaoLoi.Margin = new System.Windows.Forms.Padding(4);
             this.btBaoLoi.Name = "btBaoLoi";
             this.btBaoLoi.Size = new System.Drawing.Size(94, 24);
             this.btBaoLoi.StyleController = this.layoutControl1;
@@ -92,7 +109,7 @@
             // 
             this.dateDeadline.EditValue = null;
             this.dateDeadline.Location = new System.Drawing.Point(235, 10);
-            this.dateDeadline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateDeadline.Margin = new System.Windows.Forms.Padding(4);
             this.dateDeadline.Name = "dateDeadline";
             this.dateDeadline.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -109,7 +126,7 @@
             // 
             this.tbLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLoi.Location = new System.Drawing.Point(10, 60);
-            this.tbLoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbLoi.Margin = new System.Windows.Forms.Padding(4);
             this.tbLoi.Multiline = true;
             this.tbLoi.Name = "tbLoi";
             this.tbLoi.Size = new System.Drawing.Size(707, 220);
@@ -191,6 +208,26 @@
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(82, 17);
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dateDeadline;
+            this.layoutControlItem3.Location = new System.Drawing.Point(140, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
+            this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem3.Size = new System.Drawing.Size(573, 30);
+            this.layoutControlItem3.Text = "Deadline:";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 16);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.numericUpDown1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(140, 30);
+            this.layoutControlItem1.Text = "Số ghim phạt";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 17);
+            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btBaoLoi;
@@ -204,63 +241,27 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.dateDeadline;
-            this.layoutControlItem3.Location = new System.Drawing.Point(140, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layoutControlItem3.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem3.Size = new System.Drawing.Size(573, 30);
-            this.layoutControlItem3.Text = "Deadline:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 16);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(95, 10);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(49, 22);
-            this.numericUpDown1.TabIndex = 8;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.numericUpDown1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(140, 30);
-            this.layoutControlItem1.Text = "Số ghim phạt";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 17);
-            // 
             // FrmBaoLoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 320);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBaoLoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo lỗi";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDeadline.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDeadline.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }

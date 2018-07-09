@@ -9,7 +9,8 @@ namespace qlcv.Network
 {
     class Retrofit
     {
-        private string BASE_URL = "https://dmhoang.herokuapp.com/";
+        //private string BASE_URL = "https://dmhoang.herokuapp.com/";
+        private string BASE_URL = "http://10.100.1.38:6788/";
         private User userLogin;
 
         public static Retrofit instance = new Retrofit();
@@ -131,13 +132,13 @@ namespace qlcv.Network
         //lấy ghim
         public List<Ghim> Ghim(DateTime TuNgay,DateTime DenNgay )
         {
-            LocOBJ loc = new LocOBJ(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"));
+            LocOBJ loc = new LocOBJ(TuNgay.ToString("MM-dd-yyyy HH:mm:ss"), DenNgay.ToString("MM-dd-yyyy HH:mm:ss"));
             string json = Networking.getInstance().PostV2(BASE_URL + "api/ghim/ghimhoiha", loc);
             return JsonConvert.DeserializeObject<List<Ghim>>(json);
         }
         public List<BaoCaoChiTietGhimOBJ> BaoCaoChiTietGhim(DateTime TuNgay, DateTime DenNgay,int ID)
         {
-            ParameterBaoCaoChiTietGhim pa = new ParameterBaoCaoChiTietGhim(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"), ID);
+            ParameterBaoCaoChiTietGhim pa = new ParameterBaoCaoChiTietGhim(TuNgay.ToString("MM-dd-yyyy HH:mm:ss"), DenNgay.ToString("MM-dd-yyyy HH:mm:ss"), ID);
             string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baoCaoChiTietGhim", pa);
             return JsonConvert.DeserializeObject<List<BaoCaoChiTietGhimOBJ>>(json);
         }
@@ -149,9 +150,15 @@ namespace qlcv.Network
         }
         public List<BaoCaoTongHopGhim> BaoCaoTongHopGhim(DateTime TuNgay, DateTime DenNgay, int ID,int IDLoaiGhim)
         {
-            ParameterBaoCaoTongHopGhim pa = new ParameterBaoCaoTongHopGhim(TuNgay.ToString("dd-MM-yyyy HH:mm:ss"), DenNgay.ToString("dd-MM-yyyy HH:mm:ss"), ID, IDLoaiGhim);
+            ParameterBaoCaoTongHopGhim pa = new ParameterBaoCaoTongHopGhim(TuNgay.ToString("MM-dd-yyyy HH:mm:ss"), DenNgay.ToString("MM-dd-yyyy HH:mm:ss"), ID, IDLoaiGhim);
             string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baoCaoTHGhim", pa);
             return JsonConvert.DeserializeObject<List<BaoCaoTongHopGhim>>(json);
+        }
+        public List<BieuDoTheoThangOBJ> BieuDoGhimTheoNgay(DateTime TuNgay, DateTime DenNgay)
+        {
+            LocOBJ pa = new LocOBJ(TuNgay.ToString("MM-dd-yyyy HH:mm:ss"), DenNgay.ToString("MM-dd-yyyy HH:mm:ss"));
+            string json = Networking.getInstance().PostV2(BASE_URL + "api/baocao/baocaoththeongay", pa);
+            return JsonConvert.DeserializeObject<List<BieuDoTheoThangOBJ>>(json);
         }
         public StatusRespon UserDoiMatKhau(string oldpass, string newpass)
         {

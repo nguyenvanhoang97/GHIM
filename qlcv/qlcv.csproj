@@ -95,12 +95,6 @@
     <Compile Include="FrmBaoLoi.Designer.cs">
       <DependentUpon>FrmBaoLoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBC.Designer.cs">
-      <DependentUpon>FrmBC.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +145,7 @@
     <Compile Include="Reponses\BaoCaoChiTietGhimOBJ.cs" />
     <Compile Include="Reponses\BaoCaoTongHopGhim.cs" />
     <Compile Include="Reponses\BaoLoi.cs" />
+    <Compile Include="Reponses\BieuDoTheoThangOBJ.cs" />
     <Compile Include="Reponses\DuAn.cs" />
     <Compile Include="Reponses\Ghim.cs" />
     <Compile Include="Reponses\LoaiGhimOBJ.cs" />
@@ -178,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoLoi.resx">
       <DependentUpon>FrmBaoLoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBC.resx">
-      <DependentUpon>FrmBC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>

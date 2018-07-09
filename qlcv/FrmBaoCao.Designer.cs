@@ -138,6 +138,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 35;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView1_CustomDrawRowIndicator_1);
@@ -153,6 +154,7 @@
             this.ID.OptionsColumn.AllowEdit = false;
             this.ID.Visible = true;
             this.ID.VisibleIndex = 0;
+            this.ID.Width = 55;
             // 
             // HangMuc
             // 
@@ -164,6 +166,7 @@
             this.HangMuc.OptionsColumn.AllowEdit = false;
             this.HangMuc.Visible = true;
             this.HangMuc.VisibleIndex = 1;
+            this.HangMuc.Width = 187;
             // 
             // PhanHe
             // 
@@ -175,6 +178,7 @@
             this.PhanHe.OptionsColumn.AllowEdit = false;
             this.PhanHe.Visible = true;
             this.PhanHe.VisibleIndex = 2;
+            this.PhanHe.Width = 76;
             // 
             // MoTa
             // 
@@ -186,28 +190,35 @@
             this.MoTa.OptionsColumn.AllowEdit = false;
             this.MoTa.Visible = true;
             this.MoTa.VisibleIndex = 3;
+            this.MoTa.Width = 346;
             // 
             // gridColumn5
             // 
             this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.Caption = "Ngày bắt đầu";
+            this.gridColumn5.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn5.FieldName = "NgayBatDau";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 176;
             // 
             // gridColumn6
             // 
             this.gridColumn6.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn6.Caption = "Deadline";
+            this.gridColumn6.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn6.FieldName = "Deadline";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 176;
             // 
             // gridColumn7
             // 
@@ -219,6 +230,7 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 176;
             // 
             // gridColumn8
             // 
@@ -230,6 +242,7 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 176;
             // 
             // gridColumn9
             // 
@@ -241,6 +254,7 @@
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.Width = 192;
             // 
             // gridColumn10
             // 

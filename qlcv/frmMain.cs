@@ -38,7 +38,7 @@ namespace qlcv
             {
                 lg.Error(ex);
             }
-           
+
         }
         private void LoadPhanQuyen()
         {
@@ -57,11 +57,12 @@ namespace qlcv
             {
                 lg.Error(ex);
             }
-           
+
         }
         private void LoadMau()
         {
             layoutControlGroup2.AppearanceGroup.BorderColor = Setting.GroupColor();
+            layoutControlGroup3.AppearanceGroup.BorderColor = Setting.GroupColor();
 
         }
         private void LoadNgay()
@@ -70,22 +71,61 @@ namespace qlcv
             deDenNgay.DateTime = DateTime.Today.AddDays(1).AddTicks(-1);
         }
         List<Ghim> listGhim = new List<Ghim>();
-        private void LoadBieuDo()
+        List<BieuDoTheoThangOBJ> listTheoThang = new List<BieuDoTheoThangOBJ>();
+        private void LoadBieuDoTheoNgay()
         {
             try
             {
-                listGhim = Retrofit.instance.Ghim(deTuNgay.DateTime, deDenNgay.DateTime);
+                chartTheoNgay.Titles.Clear();
+                chartTheoNgay.Series.Clear();
+                DateTime TuNgay = deTuNgay.DateTime;
+                DateTime DenNgay = deDenNgay.DateTime;
+                listTheoThang = Retrofit.instance.BieuDoGhimTheoNgay(deTuNgay.DateTime, deDenNgay.DateTime);
+
+                // Generate a data table and bind the chart to it.
+                chartTheoNgay.DataSource = listTheoThang;
+                for (int i = 1; i < listTheoThang.Count; i++)
+                {
+                        DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series("Thời gian", ViewType.Line);
+                        series1.DataSource = listTheoThang;
+                        series1.ArgumentDataMember = "TimeByDay";
+                        series1.ValueDataMembers.AddRange(new string[] { "SoLuong" });
+                        series1.Label.TextPattern = "{V}";
+                        chartTheoNgay.Series.Add(series1);
+                        // Adjust the position of series labels. 
+                        ((PointSeriesLabel)series1.Label).Position = PointLabelPosition.Center;
+                        series1.LabelsVisibility = DefaultBoolean.True;
+                        // Detect overlapping of series labels.
+                        ((SeriesLabelBase)series1.Label).ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                        series1.LegendText = "Biểu đồ tổng hợp theo ngày";
+                        series1.ArgumentScaleType = ScaleType.Numerical;
+                        ((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
+                        ((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Solid;
+                        break;
+                    }
+
+                
+                    // Access the type-specific options of the diagram.
+                    ((XYDiagram)chartTheoNgay.Diagram).EnableAxisXZooming = true;
+
+                // Hide the legend (if necessary).
+                chartTheoNgay.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+                chartTheoNgay.Dock = DockStyle.Fill;
+                chartTheoNgay.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
             }
             catch (Exception ex)
             {
                 lg.Error(ex);
             }
-            
+        }
+        private void LoadBieuDoTheoDTV()
+        {
             WaitDialogForm wait = new DevExpress.Utils.WaitDialogForm("Phần mềm đang tải dữ liệu....", "Vui lòng chờ");
+
             try
             {
-
                 wait.Show();
+                listGhim = Retrofit.instance.Ghim(deTuNgay.DateTime, deDenNgay.DateTime);
                 chartBieuDo.Series.Clear();
                 chartBieuDo.Titles.Clear();
                 chartBieuDo.DataSource = listGhim;
@@ -155,7 +195,8 @@ namespace qlcv
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            LoadBieuDo();
+            LoadBieuDoTheoDTV();
+            LoadBieuDoTheoNgay();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -193,7 +234,8 @@ namespace qlcv
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            LoadBieuDo();
+            LoadBieuDoTheoDTV();
+            LoadBieuDoTheoNgay();
         }
 
         private void barButtonItem3_ItemClick_1(object sender, ItemClickEventArgs e)
