@@ -166,8 +166,6 @@
             this.gridColumn3.Caption = "Sửa";
             this.gridColumn3.ColumnEdit = this.btSua;
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 243;
             // 
             // btSua

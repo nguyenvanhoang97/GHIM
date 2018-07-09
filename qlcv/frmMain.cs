@@ -84,9 +84,9 @@ namespace qlcv
 
                 // Generate a data table and bind the chart to it.
                 chartTheoNgay.DataSource = listTheoThang;
-                for (int i = 1; i < listTheoThang.Count; i++)
+                for (int i = 0; i < listTheoThang.Count; i++)
                 {
-                        DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series("Thời gian", ViewType.Line);
+                        DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series("Biểu đồ tổng hợp theo ngày", ViewType.Line);
                         series1.DataSource = listTheoThang;
                         series1.ArgumentDataMember = "TimeByDay";
                         series1.ValueDataMembers.AddRange(new string[] { "SoLuong" });
@@ -97,7 +97,7 @@ namespace qlcv
                         series1.LabelsVisibility = DefaultBoolean.True;
                         // Detect overlapping of series labels.
                         ((SeriesLabelBase)series1.Label).ResolveOverlappingMode = ResolveOverlappingMode.Default;
-                        series1.LegendText = "Biểu đồ tổng hợp theo ngày";
+                        series1.LegendText = "Số lượng ghim";
                         series1.ArgumentScaleType = ScaleType.Numerical;
                         ((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
                         ((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Solid;

@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using DevExpress.Utils;
+using log4net;
 using qlcv.Network;
 using qlcv.Reponses;
 using System;
@@ -88,22 +89,35 @@ namespace qlcv
         }
         private void LoadWork(string id)
         {
+            WaitDialogForm wait = new DevExpress.Utils.WaitDialogForm("Phần mềm đang tải dữ liệu....", "Vui lòng chờ");
             try
             {
+                wait.Show();
                 List<WorkV2> works = Retrofit.instance.getAllWork(id);
                 gridControl1.DataSource = works;
             }
             catch (Exception ex)
             {
                 lg.Error(ex);
+                wait.Close();
+            }
+            finally
+            {
+                wait.Close();
             }
            
         }
 
         private void luedDuAn_EditValueChanged(object sender, EventArgs e)
         {
-            string id = luedDuAn.EditValue.ToString();
-            LoadWork(id);
+            
+            if (luedDuAn.EditValue != null)
+            {
+                string id = luedDuAn.EditValue.ToString();
+                LoadWork(id);
+            }
+            
+            
         }
 
         private void btXoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
